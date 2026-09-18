@@ -52,16 +52,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const hamburger = document.querySelector('.hamburger');
   const mobileLinks = document.querySelectorAll('.mobile-link');
 
-  if (mobileMenuBtn && mobileMenu) {
+  if (mobileMenuBtn) {
     mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
+      if (mobileMenu) {
+        mobileMenu.classList.toggle('hidden');
+      }
+      
+      const sidebarNav = document.getElementById('sidebar-nav');
+      if (sidebarNav) {
+        sidebarNav.classList.toggle('hidden');
+        sidebarNav.classList.toggle('flex');
+      }
+      
       if(hamburger) hamburger.classList.toggle('open');
     });
 
     // Close menu when a link is clicked
     mobileLinks.forEach(link => {
       link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
+        if (mobileMenu) mobileMenu.classList.add('hidden');
         if(hamburger) hamburger.classList.remove('open');
       });
     });

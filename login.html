@@ -28,8 +28,8 @@
   <div class="w-full max-w-md premium-card p-8">
     <div class="text-center mb-8">
       <a href="index.html" class="inline-flex items-center gap-2 mb-6 group">
-        <div class="w-12 h-12 rounded bg-amber-600 flex items-center justify-center text-white font-bold text-2xl transition-colors"><i class="ph-fill ph-buildings"></i></div>
-        <span class="font-bold text-3xl tracking-tight text-charcoal-dark dark:text-white group-hover:text-amber-700 dark:group-hover:text-amber-500 transition-colors">
+        <div class="w-10 h-10 rounded bg-amber-600 flex items-center justify-center text-white font-bold text-xl transition-colors"><i class="ph-fill ph-buildings"></i></div>
+        <span class="font-bold text-xl tracking-tight text-charcoal-dark dark:text-white group-hover:text-amber-700 dark:group-hover:text-amber-500 transition-colors">
           Aegis<span class="font-light">Care</span>
         </span>
       </a>
@@ -44,10 +44,7 @@
         <span class="form-error">Enter your email.</span>
       </div>
       <div class="form-group">
-        <label class="form-label text-sm flex justify-between">
-          <span>Password</span>
-          <a href="#" class="text-amber-600 hover:underline">Forgot?</a>
-        </label>
+        <label class="form-label text-sm">Password</label>
         <div class="relative">
           <input type="password" name="password" required class="form-input pr-10" placeholder="••••••••">
           <button type="button" onclick="togglePassword(this)" class="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-500 hover:text-amber-600">
@@ -56,9 +53,12 @@
         </div>
         <span class="form-error">Enter your password.</span>
       </div>
-      <div class="flex items-center">
-        <input type="checkbox" id="remember" class="mr-2 rounded text-amber-600 focus:ring-amber-500">
-        <label for="remember" class="text-sm text-gray-600 dark:text-gray-400">Remember me</label>
+      <div class="flex items-center justify-between">
+        <div class="flex items-center">
+          <input type="checkbox" id="remember" class="mr-2 rounded text-amber-600 focus:ring-amber-500">
+          <label for="remember" class="text-sm text-gray-600 dark:text-gray-400">Remember me</label>
+        </div>
+        <a href="#" class="text-sm text-amber-600 hover:underline">Forgot password?</a>
       </div>
       <button type="submit" class="w-full py-3 bg-amber-600 hover:bg-amber-700 text-white font-bold rounded transition-colors">
         Login
