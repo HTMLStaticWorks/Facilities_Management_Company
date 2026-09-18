@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aegis Facility Care | Client Portal Signup</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class', theme: { extend: { colors: { charcoal: { DEFAULT: '#1f2937', dark: '#111827' }, ivory: '#fdfbf7', amber: { 600: '#d97706', 700: '#b45309' } }, fontFamily: { sans: ['Inter', 'sans-serif'] } } } }
+  </script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body class="antialiased bg-ivory dark:bg-charcoal-dark min-h-screen flex flex-col items-center justify-center p-4 pt-20 transition-colors relative">
+  
+  <div class="absolute top-4 right-4 flex items-center gap-2">
+    <button class="theme-toggle w-10 h-10 flex items-center justify-center text-gray-500 hover:text-amber-600 dark:text-gray-400 dark:hover:text-amber-400 transition-colors rounded-full hover:bg-gray-100 dark:hover:bg-gray-800" aria-label="Toggle Theme">
+      <i class="ph ph-moon text-xl dark:hidden"></i>
+      <i class="ph ph-sun text-xl hidden dark:block"></i>
+    </button>
+    <button class="rtl-toggle w-10 h-10 flex items-center justify-center text-gray-500 hover:text-amber-600 dark:text-gray-400 dark:hover:text-amber-400 transition-colors text-sm font-bold rounded-full hover:bg-gray-100 dark:hover:bg-gray-800" aria-label="Toggle RTL">
+      RTL
+    </button>
+  </div>
+
+  <div class="w-full max-w-lg premium-card p-8">
+    <div class="text-center mb-8">
+      <a href="index.html" class="inline-flex items-center gap-2 mb-6 group">
+        <div class="w-12 h-12 rounded bg-amber-600 flex items-center justify-center text-white font-bold text-2xl transition-colors"><i class="ph-fill ph-buildings"></i></div>
+        <span class="font-bold text-3xl tracking-tight text-charcoal-dark dark:text-white group-hover:text-amber-700 dark:group-hover:text-amber-500 transition-colors">
+          Aegis<span class="font-light">Care</span>
+        </span>
+      </a>
+      <h1 class="text-2xl font-bold dark:text-white">Create Account</h1>
+      <p class="text-sm text-gray-500 mt-2">Request access to the AegisCare Client Portal</p>
+    </div>
+
+    <form id="signupForm" class="space-y-4">
+      <div class="form-group">
+        <label class="form-label text-sm">Full Name</label>
+        <input type="text" name="name" required class="form-input">
+        <span class="form-error">Required.</span>
+      </div>
+      <div class="form-group">
+        <label class="form-label text-sm">Company Name</label>
+        <input type="text" name="company" required class="form-input">
+        <span class="form-error">Required.</span>
+      </div>
+      <div class="form-group">
+        <label class="form-label text-sm">Business Email</label>
+        <input type="email" name="email" required class="form-input">
+        <span class="form-error">Valid email required.</span>
+      </div>
+      <div class="form-group">
+        <label class="form-label text-sm">Phone</label>
+        <input type="tel" name="phone" required class="form-input">
+        <span class="form-error">Required.</span>
+      </div>
+      <div class="form-group">
+        <label class="form-label text-sm">Password</label>
+        <div class="relative">
+          <input type="password" name="password" required class="form-input pr-10">
+          <button type="button" onclick="togglePassword(this)" class="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-500 hover:text-amber-600">
+            <i class="ph ph-eye text-lg"></i>
+          </button>
+        </div>
+        <span class="form-error">Required.</span>
+      </div>
+      <div class="form-group">
+        <label class="form-label text-sm">Confirm Password</label>
+        <div class="relative">
+          <input type="password" name="confirmPassword" required class="form-input pr-10">
+          <button type="button" onclick="togglePassword(this)" class="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-500 hover:text-amber-600">
+            <i class="ph ph-eye text-lg"></i>
+          </button>
+        </div>
+        <span class="form-error">Passwords do not match.</span>
+      </div>
+      <div class="form-group">
+        <div class="flex items-start">
+          <input type="checkbox" name="terms" required class="mt-1 mr-2 rounded text-amber-600 focus:ring-amber-500">
+          <label class="text-sm text-gray-600 dark:text-gray-400">
+            I agree to the <a href="#" class="text-amber-600 hover:underline">Terms of Service</a> and <a href="#" class="text-amber-600 hover:underline">Privacy Policy</a>
+          </label>
+        </div>
+        <span class="form-error block mt-1">You must accept the terms.</span>
+      </div>
+      
+      <button type="submit" class="w-full py-3 bg-amber-600 hover:bg-amber-700 text-white font-bold rounded transition-colors mt-2">
+        Create Account
+      </button>
+    </form>
+
+    <div class="mt-8 text-center text-sm text-gray-600 dark:text-gray-400 border-t border-gray-100 dark:border-gray-700 pt-6">
+      Already have an account? <a href="login.html" class="text-amber-600 font-bold hover:underline">Login</a>
+    </div>
+  </div>
+  
+  <script>
+    function togglePassword(btn) {
+      const input = btn.previousElementSibling;
+      const icon = btn.querySelector('i');
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.classList.remove('ph-eye');
+        icon.classList.add('ph-eye-slash');
+      } else {
+        input.type = 'password';
+        icon.classList.remove('ph-eye-slash');
+        icon.classList.add('ph-eye');
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      validateForm(document.getElementById('signupForm'), () => {
+        window.location.href = 'dashboard.html';
+      });
+    });
+  </script>
+</body>
+</html>

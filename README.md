@@ -1,2 +1,0 @@
-# Facilities_Management_Company
-Automated website repository for Facilities_Management_Company

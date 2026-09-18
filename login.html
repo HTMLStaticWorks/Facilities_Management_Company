@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aegis Facility Care | Client Portal Login</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class', theme: { extend: { colors: { charcoal: { DEFAULT: '#1f2937', dark: '#111827' }, ivory: '#fdfbf7', amber: { 600: '#d97706', 700: '#b45309' } }, fontFamily: { sans: ['Inter', 'sans-serif'] } } } }
+  </script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body class="antialiased bg-ivory dark:bg-charcoal-dark min-h-screen flex flex-col items-center justify-center p-4 pt-20 transition-colors relative">
+  
+  <div class="absolute top-4 right-4 flex items-center gap-2">
+    <button class="theme-toggle w-10 h-10 flex items-center justify-center text-gray-500 hover:text-amber-600 dark:text-gray-400 dark:hover:text-amber-400 transition-colors rounded-full hover:bg-gray-100 dark:hover:bg-gray-800" aria-label="Toggle Theme">
+      <i class="ph ph-moon text-xl dark:hidden"></i>
+      <i class="ph ph-sun text-xl hidden dark:block"></i>
+    </button>
+    <button class="rtl-toggle w-10 h-10 flex items-center justify-center text-gray-500 hover:text-amber-600 dark:text-gray-400 dark:hover:text-amber-400 transition-colors text-sm font-bold rounded-full hover:bg-gray-100 dark:hover:bg-gray-800" aria-label="Toggle RTL">
+      RTL
+    </button>
+  </div>
+
+  <div class="w-full max-w-md premium-card p-8">
+    <div class="text-center mb-8">
+      <a href="index.html" class="inline-flex items-center gap-2 mb-6 group">
+        <div class="w-12 h-12 rounded bg-amber-600 flex items-center justify-center text-white font-bold text-2xl transition-colors"><i class="ph-fill ph-buildings"></i></div>
+        <span class="font-bold text-3xl tracking-tight text-charcoal-dark dark:text-white group-hover:text-amber-700 dark:group-hover:text-amber-500 transition-colors">
+          Aegis<span class="font-light">Care</span>
+        </span>
+      </a>
+      <h1 class="text-2xl font-bold dark:text-white">Client Portal</h1>
+      <p class="text-sm text-gray-500 mt-2">Sign in to manage your facility operations</p>
+    </div>
+
+    <form id="loginForm" class="space-y-5">
+      <div class="form-group">
+        <label class="form-label text-sm">Business Email</label>
+        <input type="email" name="email" required class="form-input" placeholder="you@company.com">
+        <span class="form-error">Enter your email.</span>
+      </div>
+      <div class="form-group">
+        <label class="form-label text-sm flex justify-between">
+          <span>Password</span>
+          <a href="#" class="text-amber-600 hover:underline">Forgot?</a>
+        </label>
+        <div class="relative">
+          <input type="password" name="password" required class="form-input pr-10" placeholder="••••••••">
+          <button type="button" onclick="togglePassword(this)" class="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-500 hover:text-amber-600">
+            <i class="ph ph-eye text-lg"></i>
+          </button>
+        </div>
+        <span class="form-error">Enter your password.</span>
+      </div>
+      <div class="flex items-center">
+        <input type="checkbox" id="remember" class="mr-2 rounded text-amber-600 focus:ring-amber-500">
+        <label for="remember" class="text-sm text-gray-600 dark:text-gray-400">Remember me</label>
+      </div>
+      <button type="submit" class="w-full py-3 bg-amber-600 hover:bg-amber-700 text-white font-bold rounded transition-colors">
+        Login
+      </button>
+    </form>
+
+    <div class="mt-8 text-center text-sm text-gray-600 dark:text-gray-400 border-t border-gray-100 dark:border-gray-700 pt-6">
+      Don't have an account? <a href="signup.html" class="text-amber-600 font-bold hover:underline">Create Account</a>
+    </div>
+  </div>
+  
+  <script>
+    function togglePassword(btn) {
+      const input = btn.previousElementSibling;
+      const icon = btn.querySelector('i');
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.classList.remove('ph-eye');
+        icon.classList.add('ph-eye-slash');
+      } else {
+        input.type = 'password';
+        icon.classList.remove('ph-eye-slash');
+        icon.classList.add('ph-eye');
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      validateForm(document.getElementById('loginForm'), () => {
+        window.location.href = 'dashboard.html';
+      });
+    });
+  </script>
+</body>
+</html>

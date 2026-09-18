@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aegis Facility Care | Industries Served</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class', theme: { extend: { colors: { charcoal: { DEFAULT: '#1f2937', dark: '#111827' }, ivory: '#fdfbf7', amber: { 600: '#d97706', 700: '#b45309' } }, fontFamily: { sans: ['Inter', 'sans-serif'] } } } }
+  </script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="antialiased flex flex-col min-h-screen">
+  
+  <header class="sticky top-0 z-40 glass-panel border-b transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-20 items-center">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2 group">
+          <div class="w-10 h-10 rounded bg-amber-600 flex items-center justify-center text-white font-bold text-xl transition-colors"><i class="ph-fill ph-buildings"></i></div>
+          <span class="font-bold text-xl tracking-tight text-charcoal-dark dark:text-white group-hover:text-amber-700 dark:group-hover:text-amber-500 transition-colors">
+            Aegis<span class="font-light">Care</span>
+          </span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Home 1</a>
+          <a href="home-2.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Home 2</a>
+          <a href="about.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">About</a>
+          <a href="industries.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Industries</a>
+          <a href="blog.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Blog</a>
+          <a href="contact.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Contact</a>
+          <a href="dashboard.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Dashboard</a>
+        </nav>
+
+        <!-- Right Actions -->
+        <div class="flex items-center gap-4">
+          <button class="theme-toggle w-10 h-10 flex items-center justify-center text-gray-500 hover:text-amber-600 dark:text-gray-400 dark:hover:text-amber-400 transition-colors rounded-full hover:bg-gray-100 dark:hover:bg-gray-800" aria-label="Toggle Theme">
+            <i class="ph ph-moon text-xl dark:hidden"></i>
+            <i class="ph ph-sun text-xl hidden dark:block"></i>
+          </button>
+          <button class="rtl-toggle w-10 h-10 flex items-center justify-center text-gray-500 hover:text-amber-600 dark:text-gray-400 dark:hover:text-amber-400 transition-colors text-sm font-bold rounded-full hover:bg-gray-100 dark:hover:bg-gray-800" aria-label="Toggle RTL">
+            RTL
+          </button>
+          
+          <a href="login.html" class="hidden lg:flex items-center gap-2 px-5 py-2.5 rounded text-sm font-semibold text-white bg-charcoal-dark hover:bg-amber-700 dark:bg-amber-600 dark:hover:bg-amber-500 transition-colors shadow-sm">
+            Client Portal <i class="ph ph-arrow-right"></i>
+          </a>
+
+          <!-- Mobile menu button -->
+          <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 dark:text-gray-300">
+            <div class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-charcoal-dark absolute w-full shadow-lg">
+      <div class="px-4 pt-2 pb-6 space-y-1">
+        <a href="index.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Home 1</a>
+        <a href="home-2.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Home 2</a>
+        <a href="about.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">About</a>
+        <a href="industries.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Industries</a>
+        <a href="blog.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Blog</a>
+        <a href="contact.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Contact</a>
+        <a href="dashboard.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Dashboard</a>
+        <div class="pt-4">
+          <a href="login.html" class="flex justify-center items-center gap-2 w-full px-5 py-3 rounded text-base font-semibold text-white bg-charcoal-dark hover:bg-amber-700 dark:bg-amber-600 transition-colors">
+            Client Portal <i class="ph ph-sign-in"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <!-- Hero -->
+    <section class="relative py-24 text-white text-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80');">
+      <!-- Dark overlay -->
+      <div class="absolute inset-0 bg-charcoal-dark/80"></div>
+      
+      <div class="relative z-10 max-w-4xl mx-auto px-4">
+        <h1 class="text-4xl font-bold mb-4 text-white">Industries We Serve</h1>
+        <p class="text-gray-200">Tailored facility solutions across diverse sectors.</p>
+      </div>
+    </section>
+
+    <!-- Content Grid -->
+    <section class="py-20 bg-ivory dark:bg-charcoal transition-colors">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12">
+        
+        <!-- Corporate Offices -->
+        <div class="premium-card overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Corporate Office" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-3 dark:text-white">Corporate Offices</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm">Providing seamless facility support for business campuses and high-rise office buildings. We ensure a comfortable, clean, and functioning environment that enhances employee productivity.</p>
+          </div>
+        </div>
+
+        <!-- Healthcare -->
+        <div class="premium-card overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Healthcare Facility" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-3 dark:text-white">Healthcare & Clinics</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm">Specialized focus on stringent hygiene, medical-grade cleaning protocols, maintenance coordination, and rigorous compliance to support continuous patient care.</p>
+          </div>
+        </div>
+
+        <!-- Retail & Commercial -->
+        <div class="premium-card overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Retail Store" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-3 dark:text-white">Retail & Hospitality</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm">Customer-facing facility requirements demand perfection. We manage front-of-house cleaning, preventive maintenance, and operational support to protect your brand image.</p>
+          </div>
+        </div>
+
+        <!-- Industrial & Residential -->
+        <div class="premium-card overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Industrial Warehouse" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-3 dark:text-white">Industrial & Residential</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm">Robust maintenance for warehouses, logistics hubs, and residential communities, ensuring safety, security, and sustained operational continuity.</p>
+          </div>
+        </div>
+
+        <!-- Education & Institutions -->
+        <div class="premium-card overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="University Campus" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-3 dark:text-white">Education & Institutions</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm">Safe, clean, and inspiring environments for students and staff. We manage campus facilities with a focus on hygiene, maintenance, and long-term asset value.</p>
+          </div>
+        </div>
+
+        <!-- Government & Public Sectors -->
+        <div class="premium-card overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1555848962-6e79363ec58f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Government Building" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-3 dark:text-white">Government & Public Sectors</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm">Secure and compliant facility management for public infrastructure. We deliver reliable operational support tailored to the unique security demands of government facilities.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+    <footer class="bg-gray-50 dark:bg-charcoal-dark text-gray-900 dark:text-white pt-16 pb-8 border-t border-gray-200 dark:border-gray-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
+        <!-- Brand -->
+        <div>
+          <a href="index.html" class="flex items-center gap-2 group mb-6">
+            <div class="w-10 h-10 rounded bg-amber-600 flex items-center justify-center text-white font-bold text-xl transition-colors"><i class="ph-fill ph-buildings"></i></div>
+            <span class="font-bold text-xl tracking-tight text-charcoal-dark dark:text-white group-hover:text-amber-700 dark:group-hover:text-amber-500 transition-colors">
+              Aegis<span class="font-light">Care</span>
+            </span>
+          </a>
+          <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 leading-relaxed">
+            Premium integrated facility management solutions ensuring operational excellence, safety, and efficiency for modern commercial properties.
+          </p>
+          <div class="flex gap-4">
+            <a href="#" class="text-gray-400 hover:text-amber-600 dark:hover:text-amber-500 transition-colors" aria-label="LinkedIn"><i class="ph ph-linkedin-logo text-2xl"></i></a>
+            <a href="#" class="text-gray-400 hover:text-amber-600 dark:hover:text-amber-500 transition-colors" aria-label="X"><i class="ph ph-x-logo text-2xl"></i></a>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div>
+          <h4 class="font-semibold text-lg mb-6 text-gray-900 dark:text-white">Company</h4>
+          <ul class="space-y-3">
+            <li><a href="about.html" class="text-gray-600 hover:text-amber-600 dark:text-gray-400 dark:hover:text-white transition-colors text-sm">About Us</a></li>
+            <li><a href="industries.html" class="text-gray-600 hover:text-amber-600 dark:text-gray-400 dark:hover:text-white transition-colors text-sm">Industries Served</a></li>
+            <li><a href="blog.html" class="text-gray-600 hover:text-amber-600 dark:text-gray-400 dark:hover:text-white transition-colors text-sm">Insights & News</a></li>
+            <li><a href="contact.html" class="text-gray-600 hover:text-amber-600 dark:text-gray-400 dark:hover:text-white transition-colors text-sm">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Portal -->
+        <div>
+          <h4 class="font-semibold text-lg mb-6 text-gray-900 dark:text-white">Get in Touch</h4>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm">
+              <i class="ph-fill ph-map-pin text-amber-600 dark:text-amber-500"></i> 100 Corporate Plaza, NY
+            </li>
+            <li class="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm">
+              <i class="ph-fill ph-phone text-amber-600 dark:text-amber-500"></i> +1 (800) 555-0199
+            </li>
+            <li class="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm">
+              <i class="ph-fill ph-envelope text-amber-600 dark:text-amber-500"></i> operations@aegiscare.com
+            </li>
+          </ul>
+          <a href="login.html" class="inline-flex items-center gap-2 text-amber-600 dark:text-amber-500 hover:text-amber-700 dark:hover:text-white transition-colors font-medium text-sm">
+            Access Client Portal <i class="ph ph-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-gray-500 text-sm">
+          &copy; <span id="year">2026</span> Aegis Facility Care. All rights reserved.
+        </p>
+        <div class="flex gap-6">
+          <a href="#" class="text-gray-500 hover:text-amber-600 dark:hover:text-white text-sm transition-colors">Privacy Policy</a>
+          <a href="#" class="text-gray-500 hover:text-amber-600 dark:hover:text-white text-sm transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>

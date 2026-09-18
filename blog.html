@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aegis Facility Care | Blog</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class', theme: { extend: { colors: { charcoal: { DEFAULT: '#1f2937', dark: '#111827' }, ivory: '#fdfbf7', amber: { 600: '#d97706', 700: '#b45309' } }, fontFamily: { sans: ['Inter', 'sans-serif'] } } } }
+  </script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="antialiased flex flex-col min-h-screen">
+  
+  <header class="sticky top-0 z-40 glass-panel border-b transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-20 items-center">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2 group">
+          <div class="w-10 h-10 rounded bg-amber-600 flex items-center justify-center text-white font-bold text-xl transition-colors"><i class="ph-fill ph-buildings"></i></div>
+          <span class="font-bold text-xl tracking-tight text-charcoal-dark dark:text-white group-hover:text-amber-700 dark:group-hover:text-amber-500 transition-colors">
+            Aegis<span class="font-light">Care</span>
+          </span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Home 1</a>
+          <a href="home-2.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Home 2</a>
+          <a href="about.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">About</a>
+          <a href="industries.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Industries</a>
+          <a href="blog.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Blog</a>
+          <a href="contact.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Contact</a>
+          <a href="dashboard.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Dashboard</a>
+        </nav>
+
+        <!-- Right Actions -->
+        <div class="flex items-center gap-4">
+          <button class="theme-toggle w-10 h-10 flex items-center justify-center text-gray-500 hover:text-amber-600 dark:text-gray-400 dark:hover:text-amber-400 transition-colors rounded-full hover:bg-gray-100 dark:hover:bg-gray-800" aria-label="Toggle Theme">
+            <i class="ph ph-moon text-xl dark:hidden"></i>
+            <i class="ph ph-sun text-xl hidden dark:block"></i>
+          </button>
+          <button class="rtl-toggle w-10 h-10 flex items-center justify-center text-gray-500 hover:text-amber-600 dark:text-gray-400 dark:hover:text-amber-400 transition-colors text-sm font-bold rounded-full hover:bg-gray-100 dark:hover:bg-gray-800" aria-label="Toggle RTL">
+            RTL
+          </button>
+          
+          <a href="login.html" class="hidden lg:flex items-center gap-2 px-5 py-2.5 rounded text-sm font-semibold text-white bg-charcoal-dark hover:bg-amber-700 dark:bg-amber-600 dark:hover:bg-amber-500 transition-colors shadow-sm">
+            Client Portal <i class="ph ph-arrow-right"></i>
+          </a>
+
+          <!-- Mobile menu button -->
+          <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 dark:text-gray-300">
+            <div class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-charcoal-dark absolute w-full shadow-lg">
+      <div class="px-4 pt-2 pb-6 space-y-1">
+        <a href="index.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Home 1</a>
+        <a href="home-2.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Home 2</a>
+        <a href="about.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">About</a>
+        <a href="industries.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Industries</a>
+        <a href="blog.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Blog</a>
+        <a href="contact.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Contact</a>
+        <a href="dashboard.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Dashboard</a>
+        <div class="pt-4">
+          <a href="login.html" class="flex justify-center items-center gap-2 w-full px-5 py-3 rounded text-base font-semibold text-white bg-charcoal-dark hover:bg-amber-700 dark:bg-amber-600 transition-colors">
+            Client Portal <i class="ph ph-sign-in"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <!-- Hero -->
+    <section class="py-24 bg-charcoal-dark text-white text-center">
+      <h1 class="text-4xl font-bold mb-4 text-white">Facility Management Insights</h1>
+      <p class="text-gray-400">Industry news, best practices, and expert advice.</p>
+    </section>
+
+    <!-- Filters -->
+    <section class="bg-white dark:bg-charcoal-dark border-b border-gray-200 dark:border-gray-800 py-4">
+      <div class="max-w-7xl mx-auto px-4 flex flex-wrap gap-4 justify-center">
+        <button class="px-4 py-1 rounded-full bg-amber-100 text-amber-700 font-medium text-sm">All</button>
+        <button class="px-4 py-1 rounded-full text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 text-sm">Maintenance</button>
+        <button class="px-4 py-1 rounded-full text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 text-sm">Safety</button>
+        <button class="px-4 py-1 rounded-full text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 text-sm">Cleaning</button>
+        <button class="px-4 py-1 rounded-full text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 text-sm">Operations</button>
+        <button class="px-4 py-1 rounded-full text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 text-sm">Compliance</button>
+      </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="py-12 bg-ivory dark:bg-charcoal transition-colors">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row gap-8 bg-white dark:bg-charcoal-dark rounded overflow-hidden shadow-lg">
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Building architecture" class="md:w-1/2 object-cover">
+          <div class="p-8 md:w-1/2 flex flex-col justify-center">
+            <span class="text-xs font-bold text-amber-600 uppercase tracking-wider mb-2">Operations</span>
+            <h2 class="text-3xl font-bold mb-4 dark:text-white">Choosing an Integrated Facility Partner</h2>
+            <p class="text-gray-600 dark:text-gray-400 mb-6">Discover how consolidating your vendor management into a single integrated partnership can drive down costs and improve service reliability.</p>
+            <a href="#" class="text-amber-600 font-bold inline-flex items-center gap-2">Read Article <i class="ph ph-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest Insights -->
+    <section class="py-12 bg-ivory dark:bg-charcoal transition-colors">
+      <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="premium-card p-6">
+          <span class="text-xs text-gray-400 mb-2 block">Maintenance &bull; Oct 10, 2026</span>
+          <h3 class="text-xl font-bold mb-3 dark:text-white">Preventive Maintenance Planning</h3>
+          <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">A step-by-step guide to shifting from reactive fixes to proactive care.</p>
+          <button class="text-amber-600 text-sm font-semibold">Read Article</button>
+        </div>
+
+        <div class="premium-card p-6">
+          <span class="text-xs text-gray-400 mb-2 block">Operations &bull; Oct 05, 2026</span>
+          <h3 class="text-xl font-bold mb-3 dark:text-white">Reducing Facility Downtime</h3>
+          <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Key metrics and response strategies that keep your operations running 24/7.</p>
+          <button class="text-amber-600 text-sm font-semibold">Read Article</button>
+        </div>
+
+        <div class="premium-card p-6">
+          <span class="text-xs text-gray-400 mb-2 block">Cleaning &bull; Sep 28, 2026</span>
+          <h3 class="text-xl font-bold mb-3 dark:text-white">Workplace Cleaning Standards</h3>
+          <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">How post-pandemic hygiene expectations have permanently changed corporate cleaning.</p>
+          <button class="text-amber-600 text-sm font-semibold">Read Article</button>
+        </div>
+
+        <div class="premium-card p-6">
+          <span class="text-xs text-gray-400 mb-2 block">Safety &bull; Sep 15, 2026</span>
+          <h3 class="text-xl font-bold mb-3 dark:text-white">Building Safety & Compliance</h3>
+          <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Navigating complex local fire and safety regulations with digital compliance tracking.</p>
+          <button class="text-amber-600 text-sm font-semibold">Read Article</button>
+        </div>
+
+        <div class="premium-card p-6">
+          <span class="text-xs text-gray-400 mb-2 block">Maintenance &bull; Sep 02, 2026</span>
+          <h3 class="text-xl font-bold mb-3 dark:text-white">Emergency Maintenance Preparedness</h3>
+          <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Building a rapid-response protocol for unexpected critical system failures.</p>
+          <button class="text-amber-600 text-sm font-semibold">Read Article</button>
+        </div>
+
+        <div class="premium-card p-6 flex flex-col justify-center items-center text-center">
+           <h3 class="text-lg font-bold text-gray-400 mb-2">View All Articles</h3>
+           <button class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex justify-center items-center text-gray-600 dark:text-gray-300"><i class="ph ph-arrow-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section class="py-16 bg-white dark:bg-charcoal-dark border-t border-gray-200 dark:border-gray-800 text-center">
+      <div class="max-w-2xl mx-auto px-4">
+        <h2 class="text-2xl font-bold mb-4 dark:text-white">Subscribe to Our Newsletter</h2>
+        <p class="text-gray-600 dark:text-gray-400 mb-6">Get the latest facility management insights delivered directly to your inbox.</p>
+        <form class="flex flex-col sm:flex-row gap-2 justify-center" id="newsletterForm">
+          <div class="form-group flex-grow max-w-sm">
+            <input type="email" required placeholder="Business Email Address" class="form-input" name="email">
+            <span class="form-error text-left">Please enter a valid email.</span>
+          </div>
+          <button type="submit" class="px-6 py-3 bg-amber-600 text-white font-semibold rounded hover:bg-amber-700 transition-colors">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+    <footer class="bg-gray-50 dark:bg-charcoal-dark text-gray-900 dark:text-white pt-16 pb-8 border-t border-gray-200 dark:border-gray-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
+        <!-- Brand -->
+        <div>
+          <a href="index.html" class="flex items-center gap-2 group mb-6">
+            <div class="w-10 h-10 rounded bg-amber-600 flex items-center justify-center text-white font-bold text-xl transition-colors"><i class="ph-fill ph-buildings"></i></div>
+            <span class="font-bold text-xl tracking-tight text-charcoal-dark dark:text-white group-hover:text-amber-700 dark:group-hover:text-amber-500 transition-colors">
+              Aegis<span class="font-light">Care</span>
+            </span>
+          </a>
+          <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 leading-relaxed">
+            Premium integrated facility management solutions ensuring operational excellence, safety, and efficiency for modern commercial properties.
+          </p>
+          <div class="flex gap-4">
+            <a href="#" class="text-gray-400 hover:text-amber-600 dark:hover:text-amber-500 transition-colors" aria-label="LinkedIn"><i class="ph ph-linkedin-logo text-2xl"></i></a>
+            <a href="#" class="text-gray-400 hover:text-amber-600 dark:hover:text-amber-500 transition-colors" aria-label="X"><i class="ph ph-x-logo text-2xl"></i></a>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div>
+          <h4 class="font-semibold text-lg mb-6 text-gray-900 dark:text-white">Company</h4>
+          <ul class="space-y-3">
+            <li><a href="about.html" class="text-gray-600 hover:text-amber-600 dark:text-gray-400 dark:hover:text-white transition-colors text-sm">About Us</a></li>
+            <li><a href="industries.html" class="text-gray-600 hover:text-amber-600 dark:text-gray-400 dark:hover:text-white transition-colors text-sm">Industries Served</a></li>
+            <li><a href="blog.html" class="text-gray-600 hover:text-amber-600 dark:text-gray-400 dark:hover:text-white transition-colors text-sm">Insights & News</a></li>
+            <li><a href="contact.html" class="text-gray-600 hover:text-amber-600 dark:text-gray-400 dark:hover:text-white transition-colors text-sm">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Portal -->
+        <div>
+          <h4 class="font-semibold text-lg mb-6 text-gray-900 dark:text-white">Get in Touch</h4>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm">
+              <i class="ph-fill ph-map-pin text-amber-600 dark:text-amber-500"></i> 100 Corporate Plaza, NY
+            </li>
+            <li class="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm">
+              <i class="ph-fill ph-phone text-amber-600 dark:text-amber-500"></i> +1 (800) 555-0199
+            </li>
+            <li class="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm">
+              <i class="ph-fill ph-envelope text-amber-600 dark:text-amber-500"></i> operations@aegiscare.com
+            </li>
+          </ul>
+          <a href="login.html" class="inline-flex items-center gap-2 text-amber-600 dark:text-amber-500 hover:text-amber-700 dark:hover:text-white transition-colors font-medium text-sm">
+            Access Client Portal <i class="ph ph-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-gray-500 text-sm">
+          &copy; <span id="year">2026</span> Aegis Facility Care. All rights reserved.
+        </p>
+        <div class="flex gap-6">
+          <a href="#" class="text-gray-500 hover:text-amber-600 dark:hover:text-white text-sm transition-colors">Privacy Policy</a>
+          <a href="#" class="text-gray-500 hover:text-amber-600 dark:hover:text-white text-sm transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <button id="scrollTopBtn" class="bg-amber-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center"><i class="ph ph-caret-up text-xl"></i></button>
+  <script src="js/script.js"></script>
+  <script>
+    validateForm(document.getElementById('newsletterForm'), (form) => {
+      form.innerHTML = '<div class="text-green-600 dark:text-green-400 font-bold p-3">Successfully subscribed!</div>';
+    });
+  </script>
+</body>
+</html>

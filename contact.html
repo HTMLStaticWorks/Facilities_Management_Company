@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aegis Facility Care | Contact</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class', theme: { extend: { colors: { charcoal: { DEFAULT: '#1f2937', dark: '#111827' }, ivory: '#fdfbf7', amber: { 600: '#d97706', 700: '#b45309' } }, fontFamily: { sans: ['Inter', 'sans-serif'] } } } }
+  </script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="antialiased flex flex-col min-h-screen">
+  
+  <header class="sticky top-0 z-40 glass-panel border-b transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-20 items-center">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2 group">
+          <div class="w-10 h-10 rounded bg-amber-600 flex items-center justify-center text-white font-bold text-xl transition-colors"><i class="ph-fill ph-buildings"></i></div>
+          <span class="font-bold text-xl tracking-tight text-charcoal-dark dark:text-white group-hover:text-amber-700 dark:group-hover:text-amber-500 transition-colors">
+            Aegis<span class="font-light">Care</span>
+          </span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Home 1</a>
+          <a href="home-2.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Home 2</a>
+          <a href="about.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">About</a>
+          <a href="industries.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Industries</a>
+          <a href="blog.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Blog</a>
+          <a href="contact.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Contact</a>
+          <a href="dashboard.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Dashboard</a>
+        </nav>
+
+        <!-- Right Actions -->
+        <div class="flex items-center gap-4">
+          <button class="theme-toggle w-10 h-10 flex items-center justify-center text-gray-500 hover:text-amber-600 dark:text-gray-400 dark:hover:text-amber-400 transition-colors rounded-full hover:bg-gray-100 dark:hover:bg-gray-800" aria-label="Toggle Theme">
+            <i class="ph ph-moon text-xl dark:hidden"></i>
+            <i class="ph ph-sun text-xl hidden dark:block"></i>
+          </button>
+          <button class="rtl-toggle w-10 h-10 flex items-center justify-center text-gray-500 hover:text-amber-600 dark:text-gray-400 dark:hover:text-amber-400 transition-colors text-sm font-bold rounded-full hover:bg-gray-100 dark:hover:bg-gray-800" aria-label="Toggle RTL">
+            RTL
+          </button>
+          
+          <a href="login.html" class="hidden lg:flex items-center gap-2 px-5 py-2.5 rounded text-sm font-semibold text-white bg-charcoal-dark hover:bg-amber-700 dark:bg-amber-600 dark:hover:bg-amber-500 transition-colors shadow-sm">
+            Client Portal <i class="ph ph-arrow-right"></i>
+          </a>
+
+          <!-- Mobile menu button -->
+          <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 dark:text-gray-300">
+            <div class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-charcoal-dark absolute w-full shadow-lg">
+      <div class="px-4 pt-2 pb-6 space-y-1">
+        <a href="index.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Home 1</a>
+        <a href="home-2.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Home 2</a>
+        <a href="about.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">About</a>
+        <a href="industries.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Industries</a>
+        <a href="blog.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Blog</a>
+        <a href="contact.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Contact</a>
+        <a href="dashboard.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Dashboard</a>
+        <div class="pt-4">
+          <a href="login.html" class="flex justify-center items-center gap-2 w-full px-5 py-3 rounded text-base font-semibold text-white bg-charcoal-dark hover:bg-amber-700 dark:bg-amber-600 transition-colors">
+            Client Portal <i class="ph ph-sign-in"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <section class="py-24 bg-charcoal-dark text-white text-center">
+      <h1 class="text-4xl font-bold mb-4 text-white">Contact Us</h1>
+      <p class="text-gray-400">Get in touch to discuss your facility requirements.</p>
+    </section>
+
+    <section class="py-20 bg-ivory dark:bg-charcoal transition-colors">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          
+          <!-- Contact Info -->
+          <div>
+            <h2 class="text-3xl font-bold mb-8 dark:text-white">Get in Touch</h2>
+            <div class="space-y-6 mb-12">
+              <div class="flex items-start gap-4">
+                <i class="ph ph-map-pin text-3xl text-amber-600"></i>
+                <div>
+                  <h4 class="font-bold dark:text-white">Corporate Headquarters</h4>
+                  <p class="text-gray-600 dark:text-gray-400 text-sm">100 Corporate Plaza, Suite 400<br>New York, NY 10001</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <i class="ph ph-phone text-3xl text-amber-600"></i>
+                <div>
+                  <h4 class="font-bold dark:text-white">Phone Support</h4>
+                  <p class="text-gray-600 dark:text-gray-400 text-sm">+1 (800) 555-0199<br>Mon-Fri, 8am-6pm EST</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <i class="ph ph-envelope text-3xl text-amber-600"></i>
+                <div>
+                  <h4 class="font-bold dark:text-white">Email Us</h4>
+                  <p class="text-gray-600 dark:text-gray-400 text-sm">operations@aegiscare.com</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <i class="ph ph-share-network text-3xl text-amber-600"></i>
+                <div>
+                  <h4 class="font-bold dark:text-white">Follow Us</h4>
+                  <div class="flex gap-4 mt-2">
+                    <a href="#" class="text-gray-400 hover:text-amber-600 dark:hover:text-amber-500 transition-colors" aria-label="LinkedIn"><i class="ph ph-linkedin-logo text-2xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-amber-600 dark:hover:text-amber-500 transition-colors" aria-label="X"><i class="ph ph-x-logo text-2xl"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <h3 class="font-bold mb-4 dark:text-white">Service Request Types</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-white dark:bg-charcoal-dark border border-gray-200 dark:border-gray-700 rounded-full text-sm dark:text-gray-300">Maintenance</span>
+              <span class="px-3 py-1 bg-white dark:bg-charcoal-dark border border-gray-200 dark:border-gray-700 rounded-full text-sm dark:text-gray-300">Cleaning</span>
+              <span class="px-3 py-1 bg-white dark:bg-charcoal-dark border border-gray-200 dark:border-gray-700 rounded-full text-sm dark:text-gray-300">Security Coordination</span>
+              <span class="px-3 py-1 bg-white dark:bg-charcoal-dark border border-gray-200 dark:border-gray-700 rounded-full text-sm dark:text-gray-300">Compliance Support</span>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="premium-card p-8">
+            <form id="contactForm" class="space-y-4">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="form-group">
+                  <label class="form-label text-sm">Full Name *</label>
+                  <input type="text" name="name" required class="form-input">
+                  <span class="form-error">Required field.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label text-sm">Company</label>
+                  <input type="text" name="company" class="form-input">
+                </div>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="form-group">
+                  <label class="form-label text-sm">Business Email *</label>
+                  <input type="email" name="email" required class="form-input">
+                  <span class="form-error">Valid email required.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label text-sm">Phone *</label>
+                  <input type="tel" name="phone" required class="form-input">
+                  <span class="form-error">Required field.</span>
+                </div>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="form-group">
+                  <label class="form-label text-sm">Facility Type</label>
+                  <select name="facilityType" class="form-input appearance-none bg-white dark:bg-transparent">
+                    <option value="office">Corporate Office</option>
+                    <option value="medical">Healthcare</option>
+                    <option value="retail">Retail</option>
+                    <option value="industrial">Industrial</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label text-sm">Service Required</label>
+                  <select name="service" class="form-input appearance-none bg-white dark:bg-transparent">
+                    <option value="general">General Enquiry</option>
+                    <option value="maintenance">Maintenance</option>
+                    <option value="cleaning">Cleaning</option>
+                    <option value="security">Security</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label text-sm">Message *</label>
+                <textarea name="message" rows="4" required class="form-input"></textarea>
+                <span class="form-error">Required field.</span>
+              </div>
+              <button type="submit" class="w-full py-3 bg-amber-600 hover:bg-amber-700 text-white font-semibold rounded transition-colors mt-4">Send Enquiry</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map -->
+    <section class="h-96 w-full bg-gray-200">
+      <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=New%20York+(Aegis%20Facility%20Care)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+    </section>
+  </main>
+
+    <footer class="bg-gray-50 dark:bg-charcoal-dark text-gray-900 dark:text-white pt-16 pb-8 border-t border-gray-200 dark:border-gray-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
+        <!-- Brand -->
+        <div>
+          <a href="index.html" class="flex items-center gap-2 group mb-6">
+            <div class="w-10 h-10 rounded bg-amber-600 flex items-center justify-center text-white font-bold text-xl transition-colors"><i class="ph-fill ph-buildings"></i></div>
+            <span class="font-bold text-xl tracking-tight text-charcoal-dark dark:text-white group-hover:text-amber-700 dark:group-hover:text-amber-500 transition-colors">
+              Aegis<span class="font-light">Care</span>
+            </span>
+          </a>
+          <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 leading-relaxed">
+            Premium integrated facility management solutions ensuring operational excellence, safety, and efficiency for modern commercial properties.
+          </p>
+          <div class="flex gap-4">
+            <a href="#" class="text-gray-400 hover:text-amber-600 dark:hover:text-amber-500 transition-colors" aria-label="LinkedIn"><i class="ph ph-linkedin-logo text-2xl"></i></a>
+            <a href="#" class="text-gray-400 hover:text-amber-600 dark:hover:text-amber-500 transition-colors" aria-label="X"><i class="ph ph-x-logo text-2xl"></i></a>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div>
+          <h4 class="font-semibold text-lg mb-6 text-gray-900 dark:text-white">Company</h4>
+          <ul class="space-y-3">
+            <li><a href="about.html" class="text-gray-600 hover:text-amber-600 dark:text-gray-400 dark:hover:text-white transition-colors text-sm">About Us</a></li>
+            <li><a href="industries.html" class="text-gray-600 hover:text-amber-600 dark:text-gray-400 dark:hover:text-white transition-colors text-sm">Industries Served</a></li>
+            <li><a href="blog.html" class="text-gray-600 hover:text-amber-600 dark:text-gray-400 dark:hover:text-white transition-colors text-sm">Insights & News</a></li>
+            <li><a href="contact.html" class="text-gray-600 hover:text-amber-600 dark:text-gray-400 dark:hover:text-white transition-colors text-sm">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Portal -->
+        <div>
+          <h4 class="font-semibold text-lg mb-6 text-gray-900 dark:text-white">Get in Touch</h4>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm">
+              <i class="ph-fill ph-map-pin text-amber-600 dark:text-amber-500"></i> 100 Corporate Plaza, NY
+            </li>
+            <li class="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm">
+              <i class="ph-fill ph-phone text-amber-600 dark:text-amber-500"></i> +1 (800) 555-0199
+            </li>
+            <li class="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm">
+              <i class="ph-fill ph-envelope text-amber-600 dark:text-amber-500"></i> operations@aegiscare.com
+            </li>
+          </ul>
+          <a href="login.html" class="inline-flex items-center gap-2 text-amber-600 dark:text-amber-500 hover:text-amber-700 dark:hover:text-white transition-colors font-medium text-sm">
+            Access Client Portal <i class="ph ph-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-gray-500 text-sm">
+          &copy; <span id="year">2026</span> Aegis Facility Care. All rights reserved.
+        </p>
+        <div class="flex gap-6">
+          <a href="#" class="text-gray-500 hover:text-amber-600 dark:hover:text-white text-sm transition-colors">Privacy Policy</a>
+          <a href="#" class="text-gray-500 hover:text-amber-600 dark:hover:text-white text-sm transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <button id="scrollTopBtn" class="bg-amber-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center"><i class="ph ph-caret-up text-xl"></i></button>
+  <script src="js/script.js"></script>
+  <script>
+    validateForm(document.getElementById('contactForm'), (form) => {
+      form.innerHTML = '<div class="text-center p-8"><i class="ph-fill ph-check-circle text-6xl text-green-500 mb-4 mx-auto"></i><h3 class="text-2xl font-bold dark:text-white mb-2">Message Sent</h3><p class="text-gray-500">We will respond shortly.</p></div>';
+    });
+  </script>
+</body>
+</html>

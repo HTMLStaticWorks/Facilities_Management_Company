@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Premium Corporate Palette */
+  --color-charcoal: #1f2937;
+  --color-charcoal-dark: #111827;
+  --color-ivory: #fdfbf7;
+  --color-amber: #b45309;
+  --color-amber-hover: #92400e;
+  --color-neutral: #9ca3af;
+  --color-neutral-light: #e5e7eb;
+}
+
+.dark {
+  --color-charcoal: #e5e7eb; /* Inverted for dark mode text */
+  --color-charcoal-dark: #f3f4f6;
+  --color-ivory: #111827; /* Dark background */
+  --color-amber: #d97706;
+  --color-amber-hover: #f59e0b;
+  --color-neutral: #6b7280;
+  --color-neutral-light: #374151;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-ivory);
+  color: var(--color-charcoal);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark body {
+  background-color: var(--color-ivory); /* Actually dark in .dark */
+  color: var(--color-charcoal); /* Actually light text in .dark */
+}
+
+/* Base styles for premium feel */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-charcoal-dark);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.text-amber-custom {
+  color: var(--color-amber);
+}
+
+.bg-amber-custom {
+  background-color: var(--color-amber);
+}
+.bg-amber-custom:hover {
+  background-color: var(--color-amber-hover);
+}
+
+.border-amber-custom {
+  border-color: var(--color-amber);
+}
+
+/* Utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .glass-panel {
+  background: rgba(17, 24, 39, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.premium-card {
+  background-color: #ffffff;
+  border: 1px solid var(--color-neutral-light);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dark .premium-card {
+  background-color: #1f2937;
+  border-color: #374151;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+.premium-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.dark .premium-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+/* Scroll to top */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 50;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(20px);
+}
+#scrollTopBtn.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* RTL Support */
+[dir="rtl"] {
+  text-align: right;
+}
+[dir="rtl"] #scrollTopBtn {
+  right: auto;
+  left: 2rem;
+}
+
+/* Hamburger */
+.hamburger {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: none;
+}
+.hamburger span {
+  width: 24px;
+  height: 2px;
+  background: var(--color-charcoal-dark);
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+.dark .hamburger span {
+  background: var(--color-ivory);
+}
+.hamburger.open span:first-child {
+  transform: rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(20px);
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+/* Base Form Styling */
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-neutral-light);
+  border-radius: 0.375rem;
+  background-color: transparent;
+  color: var(--color-charcoal);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.dark .form-input {
+  border-color: #4b5563;
+  color: #f3f4f6;
+}
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-amber);
+  box-shadow: 0 0 0 3px rgba(180, 83, 9, 0.1);
+}
+.dark .form-input:focus {
+  border-color: var(--color-amber-hover);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+}
+.form-label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--color-charcoal-dark);
+}
+.dark .form-label {
+  color: var(--color-charcoal-dark);
+}
+.form-error {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: none;
+}
+.form-group.invalid .form-input {
+  border-color: #ef4444;
+}
+.form-group.invalid .form-error {
+  display: block;
+}
