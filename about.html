@@ -43,7 +43,7 @@
         </a>
 
         <!-- Desktop Navigation -->
-        <nav class="hidden lg:flex items-center gap-8">
+        <nav class="hidden lg:flex items-center gap-7">
           <a href="index.html"
             class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Home
             1</a>
@@ -51,7 +51,9 @@
             class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Home
             2</a>
           <a href="about.html"
-            class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">About</a>
+            class="nav-link text-sm font-medium text-amber-600 dark:text-amber-500 font-semibold transition-colors">About</a>
+          <a href="services.html"
+            class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Services</a>
           <a href="industries.html"
             class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Industries</a>
           <a href="blog.html"
@@ -77,7 +79,7 @@
           </a>
 
           <!-- Mobile menu button -->
-          <button id="mobile-menu-btn" class="lg:hidden p-2 text-gray-600 dark:text-gray-300">
+          <button id="mobile-menu-btn" class="lg:hidden p-2 text-charcoal-dark dark:text-white hover:text-amber-600 dark:hover:text-amber-400 focus:outline-none transition-colors" aria-label="Toggle navigation menu">
             <div class="hamburger">
               <span></span>
               <span></span>
@@ -100,6 +102,8 @@
           2</a>
         <a href="about.html"
           class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">About</a>
+        <a href="services.html"
+          class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Services</a>
         <a href="industries.html"
           class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Industries</a>
         <a href="blog.html"
@@ -128,14 +132,21 @@
 
   <main class="flex-grow">
     <!-- Hero -->
-    <section class="relative py-24 text-white text-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1920&q=80');">
-      <!-- Dark overlay -->
-      <div class="absolute inset-0 bg-charcoal-dark/80"></div>
+    <section class="relative min-h-[360px] md:min-h-[400px] flex items-center justify-center py-24 md:py-28 overflow-hidden text-white text-center">
+      <!-- Background Image -->
+      <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1920&q=80" alt="Corporate Facility Architecture" class="w-full h-full object-cover">
+        <!-- Dark overlay -->
+        <div class="absolute inset-0 bg-charcoal-dark/75 dark:bg-charcoal-dark/85 backdrop-blur-[2px]"></div>
+      </div>
       
       <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white">Dependable Facility Management</h1>
-        <p class="text-xl text-gray-300 font-light">Committed to preserving asset value and creating pristine
-          environments for businesses worldwide.</p>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-4 backdrop-blur-md">
+          <i class="ph-fill ph-buildings"></i>
+          About AegisCare
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white">Dependable Facility Management</h1>
+        <p class="text-lg md:text-xl text-gray-200 font-light max-w-2xl mx-auto">Committed to preserving asset value and creating pristine environments for businesses worldwide.</p>
       </div>
     </section>
 
@@ -263,6 +274,135 @@
             class="w-40 h-40 rounded-full border-4 border-gray-200 dark:border-gray-700 flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-800">
             <span class="font-bold dark:text-white">Technicians</span>
             <span class="text-xs text-gray-500 text-center px-2">Execute & Report</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Expertise -->
+    <section class="py-20 bg-ivory dark:bg-charcoal transition-colors border-t border-gray-200 dark:border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-700 dark:text-amber-400 text-xs font-semibold uppercase tracking-wider mb-4">
+            <i class="ph-fill ph-trophy"></i>
+            Operational Track Record
+          </div>
+          <h2 class="text-3xl font-bold mb-4 dark:text-white">Experience & Industry Expertise</h2>
+          <p class="text-gray-600 dark:text-gray-400">
+            Backed by over 25 years in the field, our team of 450+ certified professionals delivers unmatched technical excellence across commercial, industrial, and high-security properties.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div class="premium-card p-6 text-center border-t-4 border-amber-600">
+            <div class="text-3xl md:text-4xl font-extrabold text-amber-600 mb-1">25+</div>
+            <div class="text-sm font-bold dark:text-white">Years Operating</div>
+            <p class="text-xs text-gray-500 mt-1">Proven facility stewardship</p>
+          </div>
+          <div class="premium-card p-6 text-center border-t-4 border-amber-600">
+            <div class="text-3xl md:text-4xl font-extrabold text-amber-600 mb-1">14.5M+</div>
+            <div class="text-sm font-bold dark:text-white">Sq. Ft. Managed</div>
+            <p class="text-xs text-gray-500 mt-1">Commercial & critical sites</p>
+          </div>
+          <div class="premium-card p-6 text-center border-t-4 border-amber-600">
+            <div class="text-3xl md:text-4xl font-extrabold text-amber-600 mb-1">99.8%</div>
+            <div class="text-sm font-bold dark:text-white">SLA Uptime</div>
+            <p class="text-xs text-gray-500 mt-1">First-time-fix benchmark</p>
+          </div>
+          <div class="premium-card p-6 text-center border-t-4 border-amber-600">
+            <div class="text-3xl md:text-4xl font-extrabold text-amber-600 mb-1">450+</div>
+            <div class="text-sm font-bold dark:text-white">Certified Technicians</div>
+            <p class="text-xs text-gray-500 mt-1">Multi-trade engineering corps</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technology & Quality Management -->
+    <section class="py-20 bg-white dark:bg-charcoal-dark transition-colors border-t border-gray-200 dark:border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-700 dark:text-amber-400 text-xs font-semibold uppercase tracking-wider mb-4">
+            <i class="ph-fill ph-broadcast"></i>
+            Digital Infrastructure
+          </div>
+          <h2 class="text-3xl font-bold mb-4 dark:text-white">Technology & Quality Management</h2>
+          <p class="text-gray-600 dark:text-gray-400">
+            High standards require modern tools. We deploy smart building sensors, automated CAFM work routing, and multi-tier quality audits to maintain consistency across every asset.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="premium-card p-8">
+            <div class="w-12 h-12 rounded-lg bg-amber-50 dark:bg-charcoal flex items-center justify-center text-amber-600 mb-4">
+              <i class="ph-fill ph-device-mobile text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 dark:text-white">Connected CAFM Platform</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">
+              QR-coded equipment verification and instant digital tickets keep technicians, dispatch, and property executives aligned in real time.
+            </p>
+            <div class="text-xs text-amber-600 dark:text-amber-400 font-semibold">&bull; Automated preventive scheduling</div>
+          </div>
+
+          <div class="premium-card p-8">
+            <div class="w-12 h-12 rounded-lg bg-amber-50 dark:bg-charcoal flex items-center justify-center text-amber-600 mb-4">
+              <i class="ph-fill ph-broadcast text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 dark:text-white">Predictive IoT Telemetry</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">
+              Smart sensors monitor HVAC vibration, thermal changes, and electrical spikes—fixing anomalies well before catastrophic breakdowns.
+            </p>
+            <div class="text-xs text-amber-600 dark:text-amber-400 font-semibold">&bull; 35% longer asset lifespan</div>
+          </div>
+
+          <div class="premium-card p-8">
+            <div class="w-12 h-12 rounded-lg bg-amber-50 dark:bg-charcoal flex items-center justify-center text-amber-600 mb-4">
+              <i class="ph-fill ph-clipboard-text text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 dark:text-white">Multi-Tier QA Standards</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">
+              Unannounced supervisor spot-checks, digital SOP checklists, and automated Corrective Action Plans (CAP) guarantee benchmark adherence.
+            </p>
+            <div class="text-xs text-amber-600 dark:text-amber-400 font-semibold">&bull; 100% compliance traceability</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications & Achievements -->
+    <section class="py-20 bg-ivory dark:bg-charcoal transition-colors border-t border-gray-200 dark:border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-700 dark:text-amber-400 text-xs font-semibold uppercase tracking-wider mb-4">
+            <i class="ph-fill ph-seal-check"></i>
+            Verified Credibility
+          </div>
+          <h2 class="text-3xl font-bold mb-4 dark:text-white">Certifications & Achievements</h2>
+          <p class="text-gray-600 dark:text-gray-400">
+            Validated by international standard organizations, ensuring that every AegisCare facility operates under strict global safety, health, and environmental guidelines.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="premium-card p-6 border-l-4 border-amber-600">
+            <div class="text-xs font-bold text-amber-600 uppercase mb-2">Quality Rigor</div>
+            <h3 class="font-bold text-lg dark:text-white mb-2">ISO 9001:2015</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400">Quality management systems ensuring consistent standard operating workflows.</p>
+          </div>
+          <div class="premium-card p-6 border-l-4 border-emerald-600">
+            <div class="text-xs font-bold text-emerald-600 uppercase mb-2">Sustainability</div>
+            <h3 class="font-bold text-lg dark:text-white mb-2">ISO 14001:2015</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400">Environmental management compliance and commercial decarbonization.</p>
+          </div>
+          <div class="premium-card p-6 border-l-4 border-blue-600">
+            <div class="text-xs font-bold text-blue-600 uppercase mb-2">Workplace Safety</div>
+            <h3 class="font-bold text-lg dark:text-white mb-2">ISO 45001:2018</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400">Occupational health and safety protocols with zero-accident focus.</p>
+          </div>
+          <div class="premium-card p-6 border-l-4 border-purple-600">
+            <div class="text-xs font-bold text-purple-600 uppercase mb-2">Recognition</div>
+            <h3 class="font-bold text-lg dark:text-white mb-2">Safety Excellence</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400">National award for 3.2M+ accident-free technician operational hours.</p>
           </div>
         </div>
       </div>

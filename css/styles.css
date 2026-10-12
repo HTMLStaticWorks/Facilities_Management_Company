@@ -130,13 +130,14 @@ h1, h2, h3, h4, h5, h6 {
 .hamburger span {
   width: 24px;
   height: 2px;
-  background: var(--color-charcoal-dark);
+  background-color: #111827;
   transition: all 0.3s linear;
   position: relative;
   transform-origin: 1px;
 }
-.dark .hamburger span {
-  background: var(--color-ivory);
+.dark .hamburger span,
+html.dark .hamburger span {
+  background-color: #ffffff !important;
 }
 .hamburger.open span:first-child {
   transform: rotate(45deg);

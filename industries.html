@@ -26,11 +26,12 @@
         </a>
 
         <!-- Desktop Navigation -->
-        <nav class="hidden lg:flex items-center gap-8">
+        <nav class="hidden lg:flex items-center gap-7">
           <a href="index.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Home 1</a>
           <a href="home-2.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Home 2</a>
           <a href="about.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">About</a>
-          <a href="industries.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Industries</a>
+          <a href="services.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Services</a>
+          <a href="industries.html" class="nav-link text-sm font-medium text-amber-600 dark:text-amber-500 font-semibold transition-colors">Industries</a>
           <a href="blog.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Blog</a>
           <a href="contact.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Contact</a>
           <a href="dashboard.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Dashboard</a>
@@ -51,7 +52,7 @@
           </a>
 
           <!-- Mobile menu button -->
-          <button id="mobile-menu-btn" class="lg:hidden p-2 text-gray-600 dark:text-gray-300">
+          <button id="mobile-menu-btn" class="lg:hidden p-2 text-charcoal-dark dark:text-white hover:text-amber-600 dark:hover:text-amber-400 focus:outline-none transition-colors" aria-label="Toggle navigation menu">
             <div class="hamburger">
               <span></span>
               <span></span>
@@ -68,7 +69,8 @@
         <a href="index.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Home 1</a>
         <a href="home-2.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Home 2</a>
         <a href="about.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">About</a>
-        <a href="industries.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Industries</a>
+        <a href="services.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Services</a>
+        <a href="industries.html" class="mobile-link block px-3 py-3 text-base font-medium text-amber-600 border-b border-gray-100 dark:border-gray-800 font-semibold">Industries</a>
         <a href="blog.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Blog</a>
         <a href="contact.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Contact</a>
         <a href="dashboard.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Dashboard</a>
@@ -92,13 +94,21 @@
 
   <main class="flex-grow">
     <!-- Hero -->
-    <section class="relative py-24 text-white text-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80');">
-      <!-- Dark overlay -->
-      <div class="absolute inset-0 bg-charcoal-dark/80"></div>
+    <section class="relative min-h-[360px] md:min-h-[400px] flex items-center justify-center py-24 md:py-28 overflow-hidden text-white text-center">
+      <!-- Background Image -->
+      <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80" alt="Commercial Real Estate Sectors" class="w-full h-full object-cover">
+        <!-- Dark overlay -->
+        <div class="absolute inset-0 bg-charcoal-dark/75 dark:bg-charcoal-dark/85 backdrop-blur-[2px]"></div>
+      </div>
       
-      <div class="relative z-10 max-w-4xl mx-auto px-4">
-        <h1 class="text-4xl font-bold mb-4 text-white">Industries We Serve</h1>
-        <p class="text-gray-200">Tailored facility solutions across diverse sectors.</p>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-4 backdrop-blur-md">
+          <i class="ph-fill ph-briefcase"></i>
+          Sector Solutions
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white">Industries We Serve</h1>
+        <p class="text-lg md:text-xl text-gray-200 font-light max-w-2xl mx-auto">Tailored facility management solutions precision-engineered across diverse commercial and industrial sectors.</p>
       </div>
     </section>
 
@@ -107,59 +117,185 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12">
         
         <!-- Corporate Offices -->
-        <div class="premium-card overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Corporate Office" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-2xl font-bold mb-3 dark:text-white min-h-[4rem]">Corporate Offices</h3>
-            <p class="text-gray-600 dark:text-gray-400 text-sm">Providing seamless facility support for business campuses and high-rise office buildings. We ensure a comfortable, clean, and functioning environment that enhances employee productivity.</p>
+        <div id="corporate" class="premium-card overflow-hidden flex flex-col justify-between">
+          <div>
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Corporate Office" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-3 dark:text-white min-h-[3rem]">Corporate Offices & Campuses</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">Providing seamless facility support for business campuses and high-rise office buildings. We ensure a comfortable, clean, and functioning environment that enhances employee productivity.</p>
+              <div class="flex flex-wrap gap-2 text-xs font-semibold text-amber-600 dark:text-amber-400">
+                <span class="bg-amber-50 dark:bg-charcoal px-2.5 py-1 rounded">Daily Janitorial</span>
+                <span class="bg-amber-50 dark:bg-charcoal px-2.5 py-1 rounded">HVAC & Power</span>
+                <span class="bg-amber-50 dark:bg-charcoal px-2.5 py-1 rounded">Access Control</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0 border-t border-gray-100 dark:border-gray-800 flex justify-between items-center">
+            <a href="services.html#hard-fm" class="text-xs font-bold text-amber-600 hover:text-amber-700 inline-flex items-center gap-1">
+              What We Do Here <i class="ph ph-arrow-right"></i>
+            </a>
+            <a href="contact.html?industry=corporate" class="text-xs font-semibold text-charcoal-dark dark:text-white hover:underline">Get Proposal</a>
           </div>
         </div>
 
         <!-- Healthcare -->
-        <div class="premium-card overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Healthcare Facility" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-2xl font-bold mb-3 dark:text-white min-h-[4rem]">Healthcare & Clinics</h3>
-            <p class="text-gray-600 dark:text-gray-400 text-sm">Specialized focus on stringent hygiene, medical-grade cleaning protocols, maintenance coordination, and rigorous compliance to support continuous patient care.</p>
+        <div id="healthcare" class="premium-card overflow-hidden flex flex-col justify-between">
+          <div>
+            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Healthcare Facility" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-3 dark:text-white min-h-[3rem]">Healthcare & Clinics</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">Specialized focus on stringent hygiene, medical-grade cleaning protocols, maintenance coordination, and rigorous compliance to support continuous patient care.</p>
+              <div class="flex flex-wrap gap-2 text-xs font-semibold text-amber-600 dark:text-amber-400">
+                <span class="bg-amber-50 dark:bg-charcoal px-2.5 py-1 rounded">Sterile Disinfection</span>
+                <span class="bg-amber-50 dark:bg-charcoal px-2.5 py-1 rounded">Air Filtration HEPA</span>
+                <span class="bg-amber-50 dark:bg-charcoal px-2.5 py-1 rounded">Power Generators</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0 border-t border-gray-100 dark:border-gray-800 flex justify-between items-center">
+            <a href="services.html#soft-fm" class="text-xs font-bold text-amber-600 hover:text-amber-700 inline-flex items-center gap-1">
+              What We Do Here <i class="ph ph-arrow-right"></i>
+            </a>
+            <a href="contact.html?industry=healthcare" class="text-xs font-semibold text-charcoal-dark dark:text-white hover:underline">Get Proposal</a>
           </div>
         </div>
 
         <!-- Retail & Commercial -->
-        <div class="premium-card overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Retail Store" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-2xl font-bold mb-3 dark:text-white min-h-[4rem]">Retail & Hospitality</h3>
-            <p class="text-gray-600 dark:text-gray-400 text-sm">Customer-facing facility requirements demand perfection. We manage front-of-house cleaning, preventive maintenance, and operational support to protect your brand image.</p>
+        <div id="retail" class="premium-card overflow-hidden flex flex-col justify-between">
+          <div>
+            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Retail Store" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-3 dark:text-white min-h-[3rem]">Retail & Hospitality</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">Customer-facing facility requirements demand perfection. We manage front-of-house cleaning, preventive maintenance, and operational support to protect your brand image.</p>
+              <div class="flex flex-wrap gap-2 text-xs font-semibold text-amber-600 dark:text-amber-400">
+                <span class="bg-amber-50 dark:bg-charcoal px-2.5 py-1 rounded">Rapid Response</span>
+                <span class="bg-amber-50 dark:bg-charcoal px-2.5 py-1 rounded">Floor Restoration</span>
+                <span class="bg-amber-50 dark:bg-charcoal px-2.5 py-1 rounded">Customer Safety</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0 border-t border-gray-100 dark:border-gray-800 flex justify-between items-center">
+            <a href="services.html#emergency" class="text-xs font-bold text-amber-600 hover:text-amber-700 inline-flex items-center gap-1">
+              What We Do Here <i class="ph ph-arrow-right"></i>
+            </a>
+            <a href="contact.html?industry=retail" class="text-xs font-semibold text-charcoal-dark dark:text-white hover:underline">Get Proposal</a>
           </div>
         </div>
 
         <!-- Industrial & Residential -->
-        <div class="premium-card overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Industrial Warehouse" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-2xl font-bold mb-3 dark:text-white min-h-[4rem]">Industrial & Residential</h3>
-            <p class="text-gray-600 dark:text-gray-400 text-sm">Robust maintenance for warehouses, logistics hubs, and residential communities, ensuring safety, security, and sustained operational continuity.</p>
+        <div id="logistics" class="premium-card overflow-hidden flex flex-col justify-between">
+          <div>
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Industrial Warehouse" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-3 dark:text-white min-h-[3rem]">Industrial & Logistics</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">Robust maintenance for warehouses, logistics hubs, and automated distribution centers, ensuring safety, security, and continuous supply chain throughput.</p>
+              <div class="flex flex-wrap gap-2 text-xs font-semibold text-amber-600 dark:text-amber-400">
+                <span class="bg-amber-50 dark:bg-charcoal px-2.5 py-1 rounded">Heavy Equipment</span>
+                <span class="bg-amber-50 dark:bg-charcoal px-2.5 py-1 rounded">Loading Docks</span>
+                <span class="bg-amber-50 dark:bg-charcoal px-2.5 py-1 rounded">High-Bay Lighting</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0 border-t border-gray-100 dark:border-gray-800 flex justify-between items-center">
+            <a href="services.html#hard-fm" class="text-xs font-bold text-amber-600 hover:text-amber-700 inline-flex items-center gap-1">
+              What We Do Here <i class="ph ph-arrow-right"></i>
+            </a>
+            <a href="contact.html?industry=logistics" class="text-xs font-semibold text-charcoal-dark dark:text-white hover:underline">Get Proposal</a>
           </div>
         </div>
 
         <!-- Education & Institutions -->
-        <div class="premium-card overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="University Campus" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-2xl font-bold mb-3 dark:text-white min-h-[4rem]">Education & Institutions</h3>
-            <p class="text-gray-600 dark:text-gray-400 text-sm">Safe, clean, and inspiring environments for students and staff. We manage campus facilities with a focus on hygiene, maintenance, and long-term asset value.</p>
+        <div id="education" class="premium-card overflow-hidden flex flex-col justify-between">
+          <div>
+            <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="University Campus" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-3 dark:text-white min-h-[3rem]">Education & Institutions</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">Safe, clean, and inspiring environments for students and staff. We manage campus facilities with a focus on hygiene, maintenance, and long-term asset value.</p>
+              <div class="flex flex-wrap gap-2 text-xs font-semibold text-amber-600 dark:text-amber-400">
+                <span class="bg-amber-50 dark:bg-charcoal px-2.5 py-1 rounded">Campus Grounds</span>
+                <span class="bg-amber-50 dark:bg-charcoal px-2.5 py-1 rounded">Statutory Audits</span>
+                <span class="bg-amber-50 dark:bg-charcoal px-2.5 py-1 rounded">Eco-Cleaning</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0 border-t border-gray-100 dark:border-gray-800 flex justify-between items-center">
+            <a href="services.html#compliance" class="text-xs font-bold text-amber-600 hover:text-amber-700 inline-flex items-center gap-1">
+              What We Do Here <i class="ph ph-arrow-right"></i>
+            </a>
+            <a href="contact.html?industry=education" class="text-xs font-semibold text-charcoal-dark dark:text-white hover:underline">Get Proposal</a>
           </div>
         </div>
 
-        <!-- Government & Public Sectors -->
-        <div class="premium-card overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1555848962-6e79363ec58f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Government Building" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-2xl font-bold mb-3 dark:text-white min-h-[4rem]">Government & Public Sectors</h3>
-            <p class="text-gray-600 dark:text-gray-400 text-sm">Secure and compliant facility management for public infrastructure. We deliver reliable operational support tailored to the unique security demands of government facilities.</p>
+        <!-- Government & Banking -->
+        <div id="banking" class="premium-card overflow-hidden flex flex-col justify-between">
+          <div>
+            <img src="https://images.unsplash.com/photo-1555848962-6e79363ec58f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Government Building" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-3 dark:text-white min-h-[3rem]">Banking & High-Security Public Sites</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">Secure and compliant facility management for public infrastructure and financial buildings. Rigorous background checks, perimeter surveillance, and audited controls.</p>
+              <div class="flex flex-wrap gap-2 text-xs font-semibold text-amber-600 dark:text-amber-400">
+                <span class="bg-amber-50 dark:bg-charcoal px-2.5 py-1 rounded">Vetted Technicians</span>
+                <span class="bg-amber-50 dark:bg-charcoal px-2.5 py-1 rounded">Biometric Control</span>
+                <span class="bg-amber-50 dark:bg-charcoal px-2.5 py-1 rounded">24/7 CCTV SOC</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0 border-t border-gray-100 dark:border-gray-800 flex justify-between items-center">
+            <a href="services.html#security" class="text-xs font-bold text-amber-600 hover:text-amber-700 inline-flex items-center gap-1">
+              What We Do Here <i class="ph ph-arrow-right"></i>
+            </a>
+            <a href="contact.html?industry=banking" class="text-xs font-semibold text-charcoal-dark dark:text-white hover:underline">Get Proposal</a>
           </div>
         </div>
 
+      </div>
+    </section>
+
+    <!-- Case Studies & Proof -->
+    <section class="py-24 bg-white dark:bg-charcoal-dark transition-colors border-t border-gray-200 dark:border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-700 dark:text-amber-400 text-xs font-semibold uppercase tracking-wider mb-4">
+            <i class="ph-fill ph-chart-line-up"></i>
+            Proven Sector Track Record
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 dark:text-white">Case Studies & Verified Proof</h2>
+          <p class="text-gray-600 dark:text-gray-400">
+            Real performance metrics achieved across multi-site corporate and industrial operations.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div class="premium-card p-8 border-l-4 border-amber-600">
+            <div class="text-xs font-bold text-amber-600 uppercase mb-2">Corporate Headquarters</div>
+            <h4 class="text-xl font-bold dark:text-white mb-2">Tech Campus Portfolio</h4>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">Consolidated 8 buildings under one CAFM platform, automating work order dispatch.</p>
+            <div class="text-3xl font-extrabold text-amber-600 mb-1">-34%</div>
+            <p class="text-xs text-gray-500">Reduction in reactive repair tickets</p>
+          </div>
+
+          <div class="premium-card p-8 border-l-4 border-amber-600">
+            <div class="text-xs font-bold text-amber-600 uppercase mb-2">Healthcare Network</div>
+            <h4 class="text-xl font-bold dark:text-white mb-2">St. Jude Medical Group</h4>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">Continuous sterile disinfection protocol with automated air change telemetry.</p>
+            <div class="text-3xl font-extrabold text-amber-600 mb-1">100%</div>
+            <p class="text-xs text-gray-500">Statutory health audit compliance</p>
+          </div>
+
+          <div class="premium-card p-8 border-l-4 border-amber-600">
+            <div class="text-xs font-bold text-amber-600 uppercase mb-2">Industrial Logistics</div>
+            <h4 class="text-xl font-bold dark:text-white mb-2">National Freight Terminal</h4>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">Predictive maintenance sensors on material handling & high-cycle doors.</p>
+            <div class="text-3xl font-extrabold text-amber-600 mb-1">99.8%</div>
+            <p class="text-xs text-gray-500">Critical equipment uptime rate</p>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a href="services.html" class="inline-flex items-center gap-2 px-6 py-3 rounded bg-amber-600 hover:bg-amber-700 text-white font-semibold text-sm transition-colors">
+            Explore All Services (What We Do) <i class="ph ph-arrow-right"></i>
+          </a>
+        </div>
       </div>
     </section>
   </main>

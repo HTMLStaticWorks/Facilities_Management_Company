@@ -26,13 +26,14 @@
         </a>
 
         <!-- Desktop Navigation -->
-        <nav class="hidden lg:flex items-center gap-8">
+        <nav class="hidden lg:flex items-center gap-7">
           <a href="index.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Home 1</a>
           <a href="home-2.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Home 2</a>
           <a href="about.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">About</a>
+          <a href="services.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Services</a>
           <a href="industries.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Industries</a>
           <a href="blog.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Blog</a>
-          <a href="contact.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Contact</a>
+          <a href="contact.html" class="nav-link text-sm font-medium text-amber-600 dark:text-amber-500 font-semibold transition-colors">Contact</a>
           <a href="dashboard.html" class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Dashboard</a>
         </nav>
 
@@ -51,7 +52,7 @@
           </a>
 
           <!-- Mobile menu button -->
-          <button id="mobile-menu-btn" class="lg:hidden p-2 text-gray-600 dark:text-gray-300">
+          <button id="mobile-menu-btn" class="lg:hidden p-2 text-charcoal-dark dark:text-white hover:text-amber-600 dark:hover:text-amber-400 focus:outline-none transition-colors" aria-label="Toggle navigation menu">
             <div class="hamburger">
               <span></span>
               <span></span>
@@ -68,9 +69,10 @@
         <a href="index.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Home 1</a>
         <a href="home-2.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Home 2</a>
         <a href="about.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">About</a>
+        <a href="services.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Services</a>
         <a href="industries.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Industries</a>
         <a href="blog.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Blog</a>
-        <a href="contact.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Contact</a>
+        <a href="contact.html" class="mobile-link block px-3 py-3 text-base font-medium text-amber-600 border-b border-gray-100 dark:border-gray-800 font-semibold">Contact</a>
         <a href="dashboard.html" class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Dashboard</a>
         <div class="pt-4 flex justify-center gap-4 mt-4 pb-4 border-b border-gray-100 dark:border-gray-800">
             <button class="theme-toggle w-12 h-12 flex items-center justify-center text-gray-500 hover:text-amber-600 dark:text-gray-400 dark:hover:text-amber-400 transition-colors rounded-full border-2 border-gray-500 dark:border-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" aria-label="Toggle Theme">
@@ -91,9 +93,23 @@
     </header>
 
   <main class="flex-grow">
-    <section class="py-24 bg-charcoal-dark text-white text-center">
-      <h1 class="text-4xl font-bold mb-4 text-white">Contact Us</h1>
-      <p class="text-gray-400">Get in touch to discuss your facility requirements.</p>
+    <!-- Hero -->
+    <section class="relative min-h-[360px] md:min-h-[400px] flex items-center justify-center py-24 md:py-28 overflow-hidden text-white text-center">
+      <!-- Background Image -->
+      <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1920&q=80" alt="Corporate Facility Contact and Support" class="w-full h-full object-cover">
+        <!-- Dark overlay -->
+        <div class="absolute inset-0 bg-charcoal-dark/75 dark:bg-charcoal-dark/85 backdrop-blur-[2px]"></div>
+      </div>
+      
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-4 backdrop-blur-md">
+          <i class="ph-fill ph-headset"></i>
+          Connect With Our Specialists
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white">Contact Us</h1>
+        <p class="text-lg md:text-xl text-gray-200 font-light max-w-2xl mx-auto">Get in touch with our operations team to discuss your property requirements or request an assessment.</p>
+      </div>
     </section>
 
     <section class="py-20 bg-ivory dark:bg-charcoal transition-colors">

@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aegis Facility Care | What We Do & Our Services</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="description"
+    content="Explore Aegis Facility Care's core integrated services, who we help across commercial industries, and proven case studies.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            charcoal: { DEFAULT: '#1f2937', dark: '#111827', light: '#374151' },
+            ivory: '#fdfbf7',
+            amber: { 500: '#f59e0b', 600: '#d97706', 700: '#b45309', 800: '#92400e' }
+          },
+          fontFamily: { sans: ['Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="antialiased flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 glass-panel border-b transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-20 items-center">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2 group">
+          <div
+            class="w-10 h-10 rounded bg-amber-600 flex items-center justify-center text-white font-bold text-xl transition-colors">
+            <i class="ph-fill ph-buildings"></i>
+          </div>
+          <span
+            class="font-bold text-xl tracking-tight text-charcoal-dark dark:text-white group-hover:text-amber-700 dark:group-hover:text-amber-500 transition-colors">
+            Aegis<span class="font-light">Care</span>
+          </span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-7">
+          <a href="index.html"
+            class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Home
+            1</a>
+          <a href="home-2.html"
+            class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Home
+            2</a>
+          <a href="about.html"
+            class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">About</a>
+          <a href="services.html"
+            class="nav-link text-sm font-medium text-amber-600 dark:text-amber-500 font-semibold transition-colors">Services</a>
+          <a href="industries.html"
+            class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Industries</a>
+          <a href="blog.html"
+            class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Blog</a>
+          <a href="contact.html"
+            class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Contact</a>
+          <a href="dashboard.html"
+            class="nav-link text-sm font-medium hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Dashboard</a>
+        </nav>
+
+        <!-- Right Actions -->
+        <div class="flex items-center gap-4">
+          <button
+            class="theme-toggle w-10 h-10 hidden lg:flex items-center justify-center text-gray-500 hover:text-amber-600 dark:text-gray-400 dark:hover:text-amber-400 transition-colors rounded-full border-2 border-gray-500 dark:border-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+            aria-label="Toggle Theme">
+            <i class="ph ph-moon text-xl dark:hidden"></i>
+            <i class="ph ph-sun text-xl hidden dark:block"></i>
+          </button>
+          <button
+            class="rtl-toggle w-10 h-10 hidden lg:flex items-center justify-center text-gray-500 hover:text-amber-600 dark:text-gray-400 dark:hover:text-amber-400 transition-colors text-sm font-bold rounded-full border-2 border-gray-500 dark:border-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+            aria-label="Toggle RTL">
+            RTL
+          </button>
+
+          <a href="signup.html"
+            class="hidden lg:flex items-center justify-center w-28 h-10 rounded text-sm font-semibold text-white bg-charcoal-dark hover:bg-amber-700 dark:bg-amber-600 dark:hover:bg-amber-500 transition-colors shadow-sm">
+            Signup
+          </a>
+
+          <!-- Mobile menu button -->
+          <button id="mobile-menu-btn" class="lg:hidden p-2 text-charcoal-dark dark:text-white hover:text-amber-600 dark:hover:text-amber-400 focus:outline-none transition-colors" aria-label="Toggle navigation menu">
+            <div class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu"
+      class="hidden lg:hidden border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-charcoal-dark absolute w-full shadow-lg">
+      <div class="px-4 pt-2 pb-6 space-y-1">
+        <a href="index.html"
+          class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Home
+          1</a>
+        <a href="home-2.html"
+          class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Home
+          2</a>
+        <a href="about.html"
+          class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">About</a>
+        <a href="services.html"
+          class="mobile-link block px-3 py-3 text-base font-medium text-amber-600 border-b border-gray-100 dark:border-gray-800 font-semibold">Services</a>
+        <a href="industries.html"
+          class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Industries</a>
+        <a href="blog.html"
+          class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Blog</a>
+        <a href="contact.html"
+          class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Contact</a>
+        <a href="dashboard.html"
+          class="mobile-link block px-3 py-3 text-base font-medium border-b border-gray-100 dark:border-gray-800">Dashboard</a>
+        <div class="pt-4 flex justify-center gap-4 mt-4 pb-4 border-b border-gray-100 dark:border-gray-800">
+          <button
+            class="theme-toggle w-12 h-12 flex items-center justify-center text-gray-500 hover:text-amber-600 dark:text-gray-400 dark:hover:text-amber-400 transition-colors rounded-full border-2 border-gray-500 dark:border-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+            aria-label="Toggle Theme">
+            <i class="ph ph-moon text-2xl dark:hidden"></i>
+            <i class="ph ph-sun text-2xl hidden dark:block"></i>
+          </button>
+          <button
+            class="rtl-toggle w-12 h-12 flex items-center justify-center text-gray-500 hover:text-amber-600 dark:text-gray-400 dark:hover:text-amber-400 transition-colors text-base font-bold rounded-full border-2 border-gray-500 dark:border-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+            aria-label="Toggle RTL">
+            RTL
+          </button>
+        </div>
+        <div class="pt-4">
+          <a href="signup.html"
+            class="flex justify-center items-center gap-2 w-full px-5 py-3 rounded text-base font-semibold text-white bg-charcoal-dark hover:bg-amber-700 dark:bg-amber-600 transition-colors">
+            Signup
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow">
+
+    <!-- Hero Section (Consistent Height & Image) -->
+    <section
+      class="relative min-h-[360px] md:min-h-[400px] flex items-center justify-center py-24 md:py-28 overflow-hidden text-white text-center">
+      <!-- Background Image -->
+      <div class="absolute inset-0 z-0">
+        <img src="https://images.pexels.com/photos/7019222/pexels-photo-7019222.jpeg" alt="Integrated Facility Services"
+          class="w-full h-full object-cover">
+        <!-- Dark overlay -->
+        <div class="absolute inset-0 bg-charcoal-dark/75 dark:bg-charcoal-dark/85 backdrop-blur-[2px]"></div>
+      </div>
+
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-4 backdrop-blur-md">
+          <i class="ph-fill ph-gear"></i>
+          Integrated FM Solutions
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white">What We Do</h1>
+        <p class="text-lg md:text-xl text-gray-200 font-light max-w-2xl mx-auto">
+          Comprehensive facility management, critical infrastructure engineering, and predictive maintenance tailored to
+          maximize uptime and asset value.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 1: What They Do (Our Core Services) -->
+    <section id="services-breakdown" class="py-24 bg-white dark:bg-charcoal-dark transition-colors">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-amber-600 dark:text-amber-400 text-xs font-bold uppercase tracking-widest">Full-Lifecycle
+            Coverage</span>
+          <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4 dark:text-white">Our Core Services</h2>
+          <p class="text-gray-600 dark:text-gray-400">
+            From MEP engineering to daily corporate hygiene and statutory compliance, discover how we safeguard your
+            built environment.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service 1: HVAC & Mechanical Systems -->
+          <div id="hvac" class="premium-card overflow-hidden flex flex-col justify-between group">
+            <div>
+              <div class="w-full h-48 overflow-hidden relative">
+                <img src="https://images.pexels.com/photos/37913513/pexels-photo-37913513.jpeg"
+                  alt="HVAC Systems and Chiller Maintenance"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span
+                  class="absolute top-3 right-3 bg-charcoal-dark/85 backdrop-blur-sm text-amber-400 text-xs font-semibold px-2.5 py-1 rounded">Mechanical
+                  & Air</span>
+              </div>
+              <div class="p-6 md:p-8">
+                <div
+                  class="w-12 h-12 rounded-lg bg-amber-50 dark:bg-charcoal flex items-center justify-center text-amber-600 mb-4">
+                  <i class="ph-fill ph-fan text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 dark:text-white">HVAC Systems & Climate Care</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6">
+                  Lifecycle maintenance of central chillers, cooling towers, rooftop AHUs, ductwork sanitization, and
+                  thermal balancing.
+                </p>
+                <ul class="space-y-2 text-xs text-gray-600 dark:text-gray-300 mb-6">
+                  <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-amber-600"></i> Industrial
+                    Chiller Overhauls & Refrigerants</li>
+                  <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-amber-600"></i> Variable
+                    Air Volume (VAV) Calibration</li>
+                  <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-amber-600"></i> Air Filter
+                    & HEPA Replacement Programs</li>
+                </ul>
+              </div>
+            </div>
+            <div class="p-6 pt-0 border-t border-gray-100 dark:border-gray-800 flex justify-between items-center">
+              <span class="text-xs text-amber-600 font-semibold">24/7 Monitored</span>
+              <a href="contact.html?service=hvac"
+                class="text-xs font-bold text-charcoal-dark dark:text-white hover:text-amber-600 inline-flex items-center gap-1">Request
+                Service <i class="ph ph-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Service 2: Electrical Services -->
+          <div id="electrical" class="premium-card overflow-hidden flex flex-col justify-between group">
+            <div>
+              <div class="w-full h-48 overflow-hidden relative">
+                <img src="https://images.pexels.com/photos/675987/machine-mill-industry-steam-675987.jpeg"
+                  alt="Electrical Systems and Switchgear"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span
+                  class="absolute top-3 right-3 bg-charcoal-dark/85 backdrop-blur-sm text-amber-400 text-xs font-semibold px-2.5 py-1 rounded">High/Low
+                  Voltage</span>
+              </div>
+              <div class="p-6 md:p-8">
+                <div
+                  class="w-12 h-12 rounded-lg bg-amber-50 dark:bg-charcoal flex items-center justify-center text-amber-600 mb-4">
+                  <i class="ph-fill ph-lightning text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 dark:text-white">Electrical Systems & Power</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6">
+                  Certified technicians managing distribution panels, emergency generators, uninterruptible power
+                  supplies (UPS), and load tests.
+                </p>
+                <ul class="space-y-2 text-xs text-gray-600 dark:text-gray-300 mb-6">
+                  <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-amber-600"></i> Main
+                    Switchgear & Transformer Servicing</li>
+                  <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-amber-600"></i> Backup
+                    Diesel Generator Automatic Transfer</li>
+                  <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-amber-600"></i>
+                    Thermographic Infrared Scan Audits</li>
+                </ul>
+              </div>
+            </div>
+            <div class="p-6 pt-0 border-t border-gray-100 dark:border-gray-800 flex justify-between items-center">
+              <span class="text-xs text-amber-600 font-semibold">Licensed Electricians</span>
+              <a href="contact.html?service=electrical"
+                class="text-xs font-bold text-charcoal-dark dark:text-white hover:text-amber-600 inline-flex items-center gap-1">Request
+                Service <i class="ph ph-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Service 3: Commercial Plumbing Services -->
+          <div id="plumbing" class="premium-card overflow-hidden flex flex-col justify-between group">
+            <div>
+              <div class="w-full h-48 overflow-hidden relative">
+                <img src="https://images.pexels.com/photos/11658940/pexels-photo-11658940.jpeg"
+                  alt="Commercial Plumbing and Booster Pumps"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span
+                  class="absolute top-3 right-3 bg-charcoal-dark/85 backdrop-blur-sm text-amber-400 text-xs font-semibold px-2.5 py-1 rounded">Hydronics
+                  & Water</span>
+              </div>
+              <div class="p-6 md:p-8">
+                <div
+                  class="w-12 h-12 rounded-lg bg-amber-50 dark:bg-charcoal flex items-center justify-center text-amber-600 mb-4">
+                  <i class="ph-fill ph-drop text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 dark:text-white">Commercial Plumbing & Pumps</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6">
+                  Preventive maintenance for water booster stations, backflow prevention, sewage lift pumps, and hot
+                  water boilers.
+                </p>
+                <ul class="space-y-2 text-xs text-gray-600 dark:text-gray-300 mb-6">
+                  <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-amber-600"></i> Backflow
+                    Preventer Testing & Certification</li>
+                  <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-amber-600"></i> Variable
+                    Frequency Booster Pump Maintenance</li>
+                  <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-amber-600"></i> Storm Drain
+                    & Sump Pump Redundancy</li>
+                </ul>
+              </div>
+            </div>
+            <div class="p-6 pt-0 border-t border-gray-100 dark:border-gray-800 flex justify-between items-center">
+              <span class="text-xs text-blue-600 font-semibold">Certified Master Plumbers</span>
+              <a href="contact.html?service=plumbing"
+                class="text-xs font-bold text-charcoal-dark dark:text-white hover:text-amber-600 inline-flex items-center gap-1">Request
+                Service <i class="ph ph-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Service 4: Safety Equipment & Fire Systems -->
+          <div id="safety-equipment" class="premium-card overflow-hidden flex flex-col justify-between group">
+            <div>
+              <div class="w-full h-48 overflow-hidden relative">
+                <img src="https://images.pexels.com/photos/37352142/pexels-photo-37352142.jpeg"
+                  alt="Safety Equipment and Fire Systems"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span
+                  class="absolute top-3 right-3 bg-charcoal-dark/85 backdrop-blur-sm text-amber-400 text-xs font-semibold px-2.5 py-1 rounded">Life
+                  Safety & PPE</span>
+              </div>
+              <div class="p-6 md:p-8">
+                <div
+                  class="w-12 h-12 rounded-lg bg-amber-50 dark:bg-charcoal flex items-center justify-center text-amber-600 mb-4">
+                  <i class="ph-fill ph-fire-extinguisher text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 dark:text-white">Safety Equipment & Life Protection</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6">
+                  Inspection and servicing of commercial fire sprinkler systems, smoke extraction, fall-arrest
+                  harnesses, and emergency eye-wash stations.
+                </p>
+                <ul class="space-y-2 text-xs text-gray-600 dark:text-gray-300 mb-6">
+                  <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-amber-600"></i> Fire Alarm
+                    Panels & Gas Suppression Racks</li>
+                  <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-amber-600"></i> OSHA Safety
+                    Gear & High-Altitude Rigging</li>
+                  <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-amber-600"></i> Emergency
+                    Egress Lighting & Signage Testing</li>
+                </ul>
+              </div>
+            </div>
+            <div class="p-6 pt-0 border-t border-gray-100 dark:border-gray-800 flex justify-between items-center">
+              <span class="text-xs text-red-600 font-semibold">NFPA & OSHA Aligned</span>
+              <a href="contact.html?service=safety-equipment"
+                class="text-xs font-bold text-charcoal-dark dark:text-white hover:text-amber-600 inline-flex items-center gap-1">Request
+                Service <i class="ph ph-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Service 5: Hygiene & Cleanroom Sanitation -->
+          <div id="hygiene" class="premium-card overflow-hidden flex flex-col justify-between group">
+            <div>
+              <div class="w-full h-48 overflow-hidden relative">
+                <img src="https://images.pexels.com/photos/4098316/pexels-photo-4098316.jpeg"
+                  alt="Facility Hygiene and Cleaning"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span
+                  class="absolute top-3 right-3 bg-charcoal-dark/85 backdrop-blur-sm text-amber-400 text-xs font-semibold px-2.5 py-1 rounded">Sanitation</span>
+              </div>
+              <div class="p-6 md:p-8">
+                <div
+                  class="w-12 h-12 rounded-lg bg-amber-50 dark:bg-charcoal flex items-center justify-center text-amber-600 mb-4">
+                  <i class="ph-fill ph-sparkle text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 dark:text-white">Hygiene & Deep Sanitization</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6">
+                  Hospital-grade disinfection protocols, electrostatic surface spraying, corporate janitorial, and
+                  sustainable waste diversion.
+                </p>
+                <ul class="space-y-2 text-xs text-gray-600 dark:text-gray-300 mb-6">
+                  <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-amber-600"></i> Clinical
+                    Disinfection & Touchpoint Sterilization</li>
+                  <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-amber-600"></i> Green Seal
+                    Certified Eco Chemicals</li>
+                  <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-amber-600"></i>
+                    Comprehensive Waste Stream Segregation</li>
+                </ul>
+              </div>
+            </div>
+            <div class="p-6 pt-0 border-t border-gray-100 dark:border-gray-800 flex justify-between items-center">
+              <span class="text-xs text-emerald-600 font-semibold">Green Clean Certified</span>
+              <a href="contact.html?service=hygiene"
+                class="text-xs font-bold text-charcoal-dark dark:text-white hover:text-amber-600 inline-flex items-center gap-1">Request
+                Service <i class="ph ph-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Service 6: Physical Security & Access Control -->
+          <div id="security" class="premium-card overflow-hidden flex flex-col justify-between group">
+            <div>
+              <div class="w-full h-48 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1496368077930-c1e31b4e5b44?auto=format&fit=crop&w=800&q=80"
+                  alt="Physical Security and Access Control"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span
+                  class="absolute top-3 right-3 bg-charcoal-dark/85 backdrop-blur-sm text-amber-400 text-xs font-semibold px-2.5 py-1 rounded">Site
+                  Defense</span>
+              </div>
+              <div class="p-6 md:p-8">
+                <div
+                  class="w-12 h-12 rounded-lg bg-amber-50 dark:bg-charcoal flex items-center justify-center text-amber-600 mb-4">
+                  <i class="ph-fill ph-shield-check text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 dark:text-white">Security & Smart Access</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6">
+                  Intelligent perimeter defense, smart turnstiles, licensed concierge security officers, and 24/7
+                  centralized monitoring.
+                </p>
+                <ul class="space-y-2 text-xs text-gray-600 dark:text-gray-300 mb-6">
+                  <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-amber-600"></i> Centralized
+                    CCTV & Video Analytics</li>
+                  <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-amber-600"></i> Biometric
+                    Speedgates & Visitor Badge Kiosks</li>
+                  <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-amber-600"></i> Vetted
+                    Officers with Emergency Drill Training</li>
+                </ul>
+              </div>
+            </div>
+            <div class="p-6 pt-0 border-t border-gray-100 dark:border-gray-800 flex justify-between items-center">
+              <span class="text-xs text-amber-600 font-semibold">24/7 Command Center</span>
+              <a href="contact.html?service=security"
+                class="text-xs font-bold text-charcoal-dark dark:text-white hover:text-amber-600 inline-flex items-center gap-1">Request
+                Service <i class="ph ph-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visual Equipment & Systems Gallery Section -->
+    <section class="py-20 bg-ivory dark:bg-charcoal transition-colors border-t border-gray-200 dark:border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-700 dark:text-amber-400 text-xs font-semibold uppercase tracking-wider mb-4">
+            <i class="ph-fill ph-camera"></i>
+            Operational Visuals
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 dark:text-white">Equipment, Systems & Field Maintenance</h2>
+          <p class="text-gray-600 dark:text-gray-400">
+            A visual overview of our certified technicians servicing commercial MEP installations, life safety systems,
+            and specialized facility equipment.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Gallery 1: HVAC -->
+          <div class="premium-card overflow-hidden group">
+            <div class="h-56 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80"
+                alt="Central HVAC Chillers"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-charcoal-dark/90 via-transparent to-transparent flex items-end p-4">
+                <div>
+                  <span class="text-amber-400 text-xs font-bold uppercase tracking-wider">HVAC Systems</span>
+                  <h4 class="text-white font-bold text-base">Commercial Chiller Diagnostics</h4>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 text-xs text-gray-600 dark:text-gray-300">
+              Precision vibration analysis and refrigerant charge monitoring to prevent compressor breakdown.
+            </div>
+          </div>
+
+          <!-- Gallery 2: Electrical -->
+          <div class="premium-card overflow-hidden group">
+            <div class="h-56 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80"
+                alt="High Voltage Substation Switchgear"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-charcoal-dark/90 via-transparent to-transparent flex items-end p-4">
+                <div>
+                  <span class="text-amber-400 text-xs font-bold uppercase tracking-wider">Electrical
+                    Infrastructure</span>
+                  <h4 class="text-white font-bold text-base">Main Distribution Switchgear</h4>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 text-xs text-gray-600 dark:text-gray-300">
+              High-voltage busbar inspections, relay calibration, and annual thermal scanning for zero-downtime
+              reliability.
+            </div>
+          </div>
+
+          <!-- Gallery 3: Plumbing -->
+          <div class="premium-card overflow-hidden group">
+            <div class="h-56 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=800&q=80"
+                alt="Hydronic Piping & Valves"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-charcoal-dark/90 via-transparent to-transparent flex items-end p-4">
+                <div>
+                  <span class="text-amber-400 text-xs font-bold uppercase tracking-wider">Plumbing Systems</span>
+                  <h4 class="text-white font-bold text-base">Booster Pump & Valve Manifolds</h4>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 text-xs text-gray-600 dark:text-gray-300">
+              Automated pressure maintenance and backflow preventer certifications across multi-story commercial
+              properties.
+            </div>
+          </div>
+
+          <!-- Gallery 4: Safety Equipment -->
+          <div class="premium-card overflow-hidden group">
+            <div class="h-56 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
+                alt="Safety Equipment & Fire Suppression"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-charcoal-dark/90 via-transparent to-transparent flex items-end p-4">
+                <div>
+                  <span class="text-amber-400 text-xs font-bold uppercase tracking-wider">Safety Equipment</span>
+                  <h4 class="text-white font-bold text-base">Fire Protection & Field PPE</h4>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 text-xs text-gray-600 dark:text-gray-300">
+              Complete life safety compliance, sprinkler hydrostatic pressure testing, and multi-tier certified
+              protective gear.
+            </div>
+          </div>
+
+          <!-- Gallery 5: Facility Maintenance Crew -->
+          <div class="premium-card overflow-hidden group">
+            <div class="h-56 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80"
+                alt="Facility Maintenance Team"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-charcoal-dark/90 via-transparent to-transparent flex items-end p-4">
+                <div>
+                  <span class="text-amber-400 text-xs font-bold uppercase tracking-wider">Facility Maintenance</span>
+                  <h4 class="text-white font-bold text-base">Multi-Trade On-Site Engineers</h4>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 text-xs text-gray-600 dark:text-gray-300">
+              Dispatched technicians equipped with mobile CAFM tablets, digital work orders, and rapid replacement
+              parts.
+            </div>
+          </div>
+
+          <!-- Gallery 6: Smart Building Tech -->
+          <div class="premium-card overflow-hidden group">
+            <div class="h-56 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80"
+                alt="Modern Building Management"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-charcoal-dark/90 via-transparent to-transparent flex items-end p-4">
+                <div>
+                  <span class="text-amber-400 text-xs font-bold uppercase tracking-wider">BMS Controls</span>
+                  <h4 class="text-white font-bold text-base">IoT Intelligent Monitoring</h4>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 text-xs text-gray-600 dark:text-gray-300">
+              Real-time temperature telemetry and predictive algorithms keeping energy consumption strictly within green
+              targets.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Who They Help (Industry-Specific Facilities) -->
+    <section id="who-we-help"
+      class="py-24 bg-white dark:bg-charcoal-dark transition-colors border-y border-gray-200 dark:border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+          <div>
+            <span class="text-amber-600 dark:text-amber-400 text-xs font-bold uppercase tracking-widest">Industry
+              Relevance</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-2 dark:text-white">Who We Help (Industry-Specific Facilities)
+            </h2>
+            <p class="text-gray-600 dark:text-gray-400 mt-2 max-w-2xl">
+              From mission-critical data environments to acute healthcare cleanrooms, explore our specialized
+              operational frameworks tailored by property type.
+            </p>
+          </div>
+          <a href="industries.html"
+            class="mt-4 md:mt-0 inline-flex items-center gap-2 px-5 py-2.5 rounded bg-amber-600 hover:bg-amber-700 text-white font-semibold text-sm transition-colors">
+            View All Industries <i class="ph ph-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Industry 1: Corporate HQ -->
+          <div class="premium-card overflow-hidden flex flex-col justify-between group">
+            <div>
+              <div class="h-44 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
+                  alt="Corporate Headquarters and Commercial High-Rise"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span
+                  class="absolute top-3 left-3 bg-charcoal-dark/90 text-amber-400 text-xs font-bold px-2.5 py-1 rounded">Commercial
+                  HQs</span>
+              </div>
+              <div class="p-6">
+                <h3 class="font-bold text-lg mb-2 dark:text-white">Corporate & Tech Campuses</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-xs leading-relaxed mb-4">
+                  High-rise office buildings demanding zero downtime, seamless tenant hospitality, and smart meeting
+                  infrastructure.
+                </p>
+              </div>
+            </div>
+            <div class="p-6 pt-0 border-t border-gray-100 dark:border-gray-800">
+              <a href="industries.html#corporate"
+                class="text-amber-600 text-xs font-bold flex items-center gap-1 hover:underline">
+                View Office Solutions <i class="ph ph-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Industry 2: Healthcare -->
+          <div class="premium-card overflow-hidden flex flex-col justify-between group">
+            <div>
+              <div class="h-44 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80"
+                  alt="Healthcare and Hospital Facility"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span
+                  class="absolute top-3 left-3 bg-charcoal-dark/90 text-amber-400 text-xs font-bold px-2.5 py-1 rounded">Healthcare</span>
+              </div>
+              <div class="p-6">
+                <h3 class="font-bold text-lg mb-2 dark:text-white">Healthcare & Clinical Labs</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-xs leading-relaxed mb-4">
+                  Strict HEPA air balance, sterile surgical sanitation, and medical gas pipeline compliance with 100%
+                  audit readiness.
+                </p>
+              </div>
+            </div>
+            <div class="p-6 pt-0 border-t border-gray-100 dark:border-gray-800">
+              <a href="industries.html#healthcare"
+                class="text-amber-600 text-xs font-bold flex items-center gap-1 hover:underline">
+                View Healthcare Standards <i class="ph ph-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Industry 3: Logistics & Warehouses -->
+          <div class="premium-card overflow-hidden flex flex-col justify-between group">
+            <div>
+              <div class="h-44 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80"
+                  alt="Industrial Warehouse and Distribution Logistics"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span
+                  class="absolute top-3 left-3 bg-charcoal-dark/90 text-amber-400 text-xs font-bold px-2.5 py-1 rounded">Logistics
+                  Hubs</span>
+              </div>
+              <div class="p-6">
+                <h3 class="font-bold text-lg mb-2 dark:text-white">Logistics & Distribution</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-xs leading-relaxed mb-4">
+                  High-bay lighting repair, loading dock leveller maintenance, and heavy industrial floor scrubbers for
+                  continuous throughput.
+                </p>
+              </div>
+            </div>
+            <div class="p-6 pt-0 border-t border-gray-100 dark:border-gray-800">
+              <a href="industries.html#logistics"
+                class="text-amber-600 text-xs font-bold flex items-center gap-1 hover:underline">
+                View Logistics Framework <i class="ph ph-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Industry 4: Banking & Secure Facilities -->
+          <div class="premium-card overflow-hidden flex flex-col justify-between group">
+            <div>
+              <div class="h-44 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1555848962-6e79363ec58f?auto=format&fit=crop&w=800&q=80"
+                  alt="Banking and High-Security Government Facility"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span
+                  class="absolute top-3 left-3 bg-charcoal-dark/90 text-amber-400 text-xs font-bold px-2.5 py-1 rounded">High
+                  Security</span>
+              </div>
+              <div class="p-6">
+                <h3 class="font-bold text-lg mb-2 dark:text-white">Banking & Secure Facilities</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-xs leading-relaxed mb-4">
+                  Perimeter biometric defense, vault monitoring, and security-cleared technical staff operating in
+                  confidential premises.
+                </p>
+              </div>
+            </div>
+            <div class="p-6 pt-0 border-t border-gray-100 dark:border-gray-800">
+              <a href="industries.html#banking"
+                class="text-amber-600 text-xs font-bold flex items-center gap-1 hover:underline">
+                View Secure Protocols <i class="ph ph-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Case Studies & Proof -->
+    <section id="case-studies" class="py-24 bg-white dark:bg-charcoal-dark transition-colors">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-700 dark:text-amber-400 text-xs font-semibold uppercase tracking-wider mb-4">
+            <i class="ph-fill ph-trophy"></i>
+            Demonstrated Client Results
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 dark:text-white">Case Studies & Measurable Proof</h2>
+          <p class="text-gray-600 dark:text-gray-400 text-base md:text-lg">
+            Real outcomes from enterprise properties that partnered with AegisCare for complete facility transformation.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <!-- Case 1 -->
+          <div
+            class="premium-card overflow-hidden flex flex-col justify-between border border-gray-100 dark:border-gray-800">
+            <div>
+              <div class="h-48 overflow-hidden relative">
+                <img src="https://images.pexels.com/photos/388829/pexels-photo-388829.jpeg"
+                  alt="Skyline Commercial Tower" class="w-full h-full object-cover">
+                <span
+                  class="absolute top-3 left-3 bg-charcoal-dark/90 text-amber-400 text-xs font-bold px-3 py-1 rounded">Commercial
+                  Tower</span>
+              </div>
+              <div class="p-6 md:p-8">
+                <h3 class="text-xl font-bold mb-2 dark:text-white">Skyline Financial Plaza</h3>
+                <p class="text-xs text-amber-600 font-semibold mb-4">1.2M Sq. Ft. &bull; Class-A Commercial Real Estate
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6">
+                  Transitioned from 14 disparate maintenance contractors to AegisCare's integrated single-point
+                  management platform with predictive IoT sensors.
+                </p>
+                <div class="grid grid-cols-2 gap-4 bg-gray-50 dark:bg-charcoal p-4 rounded mb-4">
+                  <div>
+                    <div class="text-2xl font-extrabold text-amber-600">-28%</div>
+                    <div class="text-xs text-gray-500">Operating Cost</div>
+                  </div>
+                  <div>
+                    <div class="text-2xl font-extrabold text-amber-600">99.9%</div>
+                    <div class="text-xs text-gray-500">HVAC Uptime</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 pt-0">
+              <a href="contact.html?study=skyline"
+                class="text-sm font-semibold text-amber-600 hover:text-amber-700 flex items-center gap-1">Read Full
+                Study <i class="ph ph-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Case 2 -->
+          <div
+            class="premium-card overflow-hidden flex flex-col justify-between border border-gray-100 dark:border-gray-800">
+            <div>
+              <div class="h-48 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=600&q=80"
+                  alt="Metro Health Network" class="w-full h-full object-cover">
+                <span
+                  class="absolute top-3 left-3 bg-charcoal-dark/90 text-amber-400 text-xs font-bold px-3 py-1 rounded">Healthcare
+                  Network</span>
+              </div>
+              <div class="p-6 md:p-8">
+                <h3 class="text-xl font-bold mb-2 dark:text-white">Metro Regional Medical Center</h3>
+                <p class="text-xs text-amber-600 font-semibold mb-4">850-Bed Acute Care Hospital & Clinics</p>
+                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6">
+                  Implemented clinical-grade disinfection routines, backup power automation, and automated compliance
+                  tracking across 12 medical buildings.
+                </p>
+                <div class="grid grid-cols-2 gap-4 bg-gray-50 dark:bg-charcoal p-4 rounded mb-4">
+                  <div>
+                    <div class="text-2xl font-extrabold text-amber-600">100%</div>
+                    <div class="text-xs text-gray-500">Audit Compliance</div>
+                  </div>
+                  <div>
+                    <div class="text-2xl font-extrabold text-amber-600">0</div>
+                    <div class="text-xs text-gray-500">Critical Incidents</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 pt-0">
+              <a href="contact.html?study=metro-health"
+                class="text-sm font-semibold text-amber-600 hover:text-amber-700 flex items-center gap-1">Read Full
+                Study <i class="ph ph-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Case 3 -->
+          <div
+            class="premium-card overflow-hidden flex flex-col justify-between border border-gray-100 dark:border-gray-800">
+            <div>
+              <div class="h-48 overflow-hidden relative">
+                <img src="https://images.pexels.com/photos/36423820/pexels-photo-36423820.jpeg" alt="Apex Logistics Hub"
+                  class="w-full h-full object-cover">
+                <span
+                  class="absolute top-3 left-3 bg-charcoal-dark/90 text-amber-400 text-xs font-bold px-3 py-1 rounded">Logistics
+                  & Distribution</span>
+              </div>
+              <div class="p-6 md:p-8">
+                <h3 class="text-xl font-bold mb-2 dark:text-white">Apex Global Logistics Hub</h3>
+                <p class="text-xs text-amber-600 font-semibold mb-4">2.4M Sq. Ft. Automated Sorting Facility</p>
+                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6">
+                  Integrated high-frequency mechanical servicing and rapid night-shift dispatch, cutting emergency work
+                  orders by half.
+                </p>
+                <div class="grid grid-cols-2 gap-4 bg-gray-50 dark:bg-charcoal p-4 rounded mb-4">
+                  <div>
+                    <div class="text-2xl font-extrabold text-amber-600">-46%</div>
+                    <div class="text-xs text-gray-500">Unscheduled Downtime</div>
+                  </div>
+                  <div>
+                    <div class="text-2xl font-extrabold text-amber-600">&lt;28m</div>
+                    <div class="text-xs text-gray-500">Avg MTTR Response</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 pt-0">
+              <a href="contact.html?study=apex-logistics"
+                class="text-sm font-semibold text-amber-600 hover:text-amber-700 flex items-center gap-1">Read Full
+                Study <i class="ph ph-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Call to Action Banner -->
+        <div
+          class="bg-charcoal-dark text-white rounded-xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
+          <div>
+            <h3 class="text-2xl md:text-3xl font-bold mb-3">Ready to transform your facility operations?</h3>
+            <p class="text-gray-300 text-sm md:text-base max-w-xl">
+              Connect with our facility directors to receive a complimentary infrastructure assessment and customized
+              SLA proposal.
+            </p>
+          </div>
+          <div class="flex gap-4 flex-shrink-0">
+            <a href="contact.html"
+              class="px-6 py-3.5 bg-amber-600 hover:bg-amber-700 text-white font-semibold rounded transition-colors text-sm">
+              Schedule Assessment
+            </a>
+            <a href="dashboard.html"
+              class="px-6 py-3.5 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold rounded transition-colors text-sm">
+              Client Portal Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer
+    class="bg-gray-50 dark:bg-charcoal-dark text-gray-900 dark:text-white pt-16 pb-8 border-t border-gray-200 dark:border-gray-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
+        <!-- Brand -->
+        <div>
+          <a href="index.html" class="flex items-center gap-2 group mb-6">
+            <div
+              class="w-10 h-10 rounded bg-amber-600 flex items-center justify-center text-white font-bold text-xl transition-colors">
+              <i class="ph-fill ph-buildings"></i>
+            </div>
+            <span
+              class="font-bold text-xl tracking-tight text-charcoal-dark dark:text-white group-hover:text-amber-700 dark:group-hover:text-amber-500 transition-colors">
+              Aegis<span class="font-light">Care</span>
+            </span>
+          </a>
+          <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 leading-relaxed">
+            Premium integrated facility management solutions ensuring operational excellence, safety, and efficiency for
+            modern commercial properties.
+          </p>
+          <div class="flex gap-4">
+            <a href="#"
+              class="inline-block text-gray-400 hover:text-[#0A66C2] dark:hover:text-[#0A66C2] transition-all transform hover:-translate-y-1 hover:scale-110"
+              aria-label="LinkedIn"><i class="ph ph-linkedin-logo text-2xl"></i></a>
+            <a href="#"
+              class="inline-block text-gray-400 hover:text-black dark:hover:text-white transition-all transform hover:-translate-y-1 hover:scale-110"
+              aria-label="X"><i class="ph ph-x-logo text-2xl"></i></a>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div>
+          <h4 class="font-semibold text-lg mb-6 text-gray-900 dark:text-white">Company & Solutions</h4>
+          <ul class="space-y-3">
+            <li><a href="services.html"
+                class="text-gray-600 hover:text-amber-600 dark:text-gray-400 dark:hover:text-white transition-colors text-sm font-semibold">Our
+                Services</a></li>
+            <li><a href="about.html"
+                class="text-gray-600 hover:text-amber-600 dark:text-gray-400 dark:hover:text-white transition-colors text-sm">About
+                Us</a></li>
+            <li><a href="industries.html"
+                class="text-gray-600 hover:text-amber-600 dark:text-gray-400 dark:hover:text-white transition-colors text-sm">Who
+                We Help (Industries)</a></li>
+            <li><a href="blog.html"
+                class="text-gray-600 hover:text-amber-600 dark:text-gray-400 dark:hover:text-white transition-colors text-sm">Insights
+                & News</a></li>
+            <li><a href="contact.html"
+                class="text-gray-600 hover:text-amber-600 dark:text-gray-400 dark:hover:text-white transition-colors text-sm">Contact
+                & Consultation</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Portal -->
+        <div>
+          <h4 class="font-semibold text-lg mb-6 text-gray-900 dark:text-white">Get in Touch</h4>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm">
+              <i class="ph-fill ph-map-pin text-amber-600 dark:text-amber-500"></i> 100 Corporate Plaza, NY
+            </li>
+            <li class="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm">
+              <i class="ph-fill ph-phone text-amber-600 dark:text-amber-500"></i> +1 (800) 555-0199
+            </li>
+            <li class="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm">
+              <i class="ph-fill ph-envelope text-amber-600 dark:text-amber-500"></i> operations@aegiscare.com
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-gray-500 text-sm">
+          &copy; <span id="year">2026</span> Aegis Facility Care. All rights reserved.
+        </p>
+        <div class="flex gap-6">
+          <a href="#" class="text-gray-500 hover:text-amber-600 dark:hover:text-white text-sm transition-colors">Privacy
+            Policy</a>
+          <a href="#" class="text-gray-500 hover:text-amber-600 dark:hover:text-white text-sm transition-colors">Terms
+            of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn"
+    class="bg-amber-600 hover:bg-amber-700 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition-colors"
+    aria-label="Scroll to top">
+    <i class="ph ph-caret-up text-xl"></i>
+  </button>
+
+  <script src="js/script.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
